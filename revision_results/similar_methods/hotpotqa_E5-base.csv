@@ -1,0 +1,7 @@
+dataset,retriever,method,type,config,val_Recall@5,Recall@3,Recall@5,FullRec@3,FullRec@5,NDCG@10,MRR
+hotpotqa,E5-base,ppr,entity,"{""damping"": 0.3}",0.935,0.8625,0.9313,0.7465,0.87,0.9231,0.95
+hotpotqa,E5-base,ppr,triple,"{""damping"": 0.5}",0.9515,0.8878,0.9495,0.79,0.9035,0.9311,0.9486
+hotpotqa,E5-base,ppr,both,"{""damping"": 0.3}",0.9387,0.8735,0.9377,0.7635,0.882,0.9283,0.9535
+hotpotqa,E5-base,gcs,entity,"{""a"": 0.9}",0.9495,0.8702,0.9413,0.7615,0.8905,0.9244,0.9455
+hotpotqa,E5-base,gcs,triple,"{""a"": 0.7}",0.9413,0.8592,0.9287,0.74,0.865,0.9204,0.9454
+hotpotqa,E5-base,gcs,both,"{""a"": 0.9}",0.949,0.8705,0.9405,0.762,0.889,0.9247,0.9455

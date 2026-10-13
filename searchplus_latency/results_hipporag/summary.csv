@@ -1,0 +1,2 @@
+dataset,queries,llm,embedding,error_rate,Recall@3,Recall@5,FullRec@3,FullRec@5,index_s_mean,retrieve_s_mean,total_s_mean,unmatched_docs
+musique,3,gemma4,nvidia/NV-Embed-v2,1.0,0.3056,0.3889,0.0,0.0,,,,0

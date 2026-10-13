@@ -1,0 +1,45 @@
+dataset,retriever,variant,ranker,type,scheme,config,val_Recall@5,Recall@3,Recall@5,FullRec@3,FullRec@5,NDCG@10,MRR,share_over_b,share_weight_decides
+2wiki,GTE-large,aware,bfs,entity,count,"{""top_k_bm25"": 2, ""max_depth"": 2, ""branch"": 3, ""alpha"": 0.3}",0.9553,0.8572,0.9536,0.64,0.8825,0.9489,0.9879,0.166,0.0211
+2wiki,GTE-large,aware,ge,entity,count,"{""ge_alpha"": 0.5, ""ge_hops"": 3}",0.9445,0.823,0.94,0.6175,0.8635,0.9124,0.9044,,
+2wiki,GTE-large,aware,ppr,entity,count,"{""damping"": 0.5}",0.9469,0.8482,0.9455,0.6255,0.868,0.9521,0.9844,,
+2wiki,GTE-large,aware,gcs,entity,count,"{""a"": 0.9}",0.9439,0.8427,0.9415,0.6255,0.8545,0.9522,0.9879,,
+2wiki,GTE-large,aware,bfs,entity,binary,"{""top_k_bm25"": 2, ""max_depth"": 2, ""branch"": 3, ""alpha"": 0.0}",0.9511,0.8552,0.951,0.637,0.878,0.9484,0.9879,0.1657,
+2wiki,GTE-large,aware,ge,entity,binary,"{""ge_alpha"": 0.5, ""ge_hops"": 3}",0.9419,0.8197,0.9373,0.6135,0.859,0.9113,0.9039,,
+2wiki,GTE-large,aware,ppr,entity,binary,"{""damping"": 0.5}",0.9456,0.8479,0.9449,0.625,0.8665,0.953,0.9861,,
+2wiki,GTE-large,aware,gcs,entity,binary,"{""a"": 0.9}",0.9431,0.8406,0.9403,0.6215,0.8525,0.9517,0.9879,,
+2wiki,GTE-large,aware,bfs,entity,idf,"{""top_k_bm25"": 2, ""max_depth"": 2, ""branch"": 3, ""alpha"": 0.5}",0.9577,0.8625,0.9547,0.6485,0.886,0.9498,0.9879,0.166,0.0269
+2wiki,GTE-large,aware,ge,entity,idf,"{""ge_alpha"": 0.5, ""ge_hops"": 2}",0.9437,0.8264,0.941,0.621,0.8635,0.9169,0.913,,
+2wiki,GTE-large,aware,ppr,entity,idf,"{""damping"": 0.7}",0.9505,0.8468,0.951,0.621,0.881,0.9484,0.9766,,
+2wiki,GTE-large,aware,gcs,entity,idf,"{""a"": 0.9}",0.9463,0.8452,0.9439,0.63,0.859,0.9528,0.9879,,
+2wiki,GTE-large,aware,bfs,triple,count,"{""top_k_bm25"": 2, ""max_depth"": 2, ""branch"": 3, ""alpha"": 0.5}",0.9571,0.8611,0.9533,0.646,0.8815,0.9495,0.9879,0.1952,0.0402
+2wiki,GTE-large,aware,ge,triple,count,"{""ge_alpha"": 0.3, ""ge_hops"": 3}",0.9275,0.8119,0.9217,0.5905,0.8195,0.9173,0.9311,,
+2wiki,GTE-large,aware,ppr,triple,count,"{""damping"": 0.7}",0.9586,0.8635,0.9581,0.649,0.9,0.9554,0.9791,,
+2wiki,GTE-large,aware,gcs,triple,count,"{""a"": 0.9}",0.9376,0.8347,0.9335,0.6085,0.8365,0.9491,0.9879,,
+2wiki,GTE-large,aware,bfs,triple,binary,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 1}",0.9521,0.8582,0.9487,0.638,0.874,0.9487,0.9879,0.1937,
+2wiki,GTE-large,aware,ge,triple,binary,"{""ge_alpha"": 0.3, ""ge_hops"": 2}",0.9214,0.8085,0.9175,0.579,0.8085,0.9247,0.9503,,
+2wiki,GTE-large,aware,ppr,triple,binary,"{""damping"": 0.7}",0.9593,0.8634,0.9585,0.649,0.901,0.9557,0.9818,,
+2wiki,GTE-large,aware,gcs,triple,binary,"{""a"": 0.9}",0.9331,0.8315,0.9299,0.603,0.828,0.9481,0.9879,,
+2wiki,GTE-large,aware,bfs,both,count,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.3}",0.9597,0.8645,0.9559,0.654,0.888,0.95,0.9879,0.2142,0.0527
+2wiki,GTE-large,aware,ge,both,count,"{""ge_alpha"": 0.5, ""ge_hops"": 3}",0.9444,0.8214,0.9409,0.6205,0.8655,0.9075,0.8928,,
+2wiki,GTE-large,aware,ppr,both,count,"{""damping"": 0.7}",0.9526,0.8521,0.9524,0.631,0.886,0.951,0.9783,,
+2wiki,GTE-large,aware,gcs,both,count,"{""a"": 0.9}",0.9437,0.8433,0.9435,0.6265,0.8585,0.952,0.9879,,
+2wiki,GTE-large,aware,bfs,both,binary,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 1}",0.9536,0.8614,0.9515,0.643,0.8805,0.9494,0.9879,0.2146,
+2wiki,GTE-large,aware,ge,both,binary,"{""ge_alpha"": 0.5, ""ge_hops"": 2}",0.938,0.8157,0.9336,0.602,0.846,0.9132,0.9133,,
+2wiki,GTE-large,aware,ppr,both,binary,"{""damping"": 0.5}",0.9493,0.8495,0.9469,0.627,0.873,0.9542,0.9879,,
+2wiki,GTE-large,aware,gcs,both,binary,"{""a"": 0.9}",0.94,0.839,0.937,0.617,0.845,0.9507,0.9879,,
+2wiki,GTE-large,aware,bfs,both,lam0.5,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.3}",0.9594,0.8645,0.9564,0.6545,0.889,0.9501,0.9879,0.2142,0.0539
+2wiki,GTE-large,aware,ge,both,lam0.5,"{""ge_alpha"": 0.5, ""ge_hops"": 2}",0.9394,0.8199,0.9335,0.612,0.8475,0.9119,0.9079,,
+2wiki,GTE-large,aware,ppr,both,lam0.5,"{""damping"": 0.7}",0.9567,0.8634,0.959,0.6505,0.9025,0.955,0.979,,
+2wiki,GTE-large,aware,gcs,both,lam0.5,"{""a"": 0.9}",0.9429,0.8423,0.9414,0.6235,0.852,0.9516,0.9879,,
+2wiki,GTE-large,aware,bfs,both,lam1,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.3}",0.9595,0.864,0.9559,0.653,0.888,0.95,0.9879,0.2142,0.0521
+2wiki,GTE-large,aware,ge,both,lam1,"{""ge_alpha"": 0.5, ""ge_hops"": 2}",0.9429,0.8254,0.9376,0.6225,0.8565,0.9141,0.9091,,
+2wiki,GTE-large,aware,ppr,both,lam1,"{""damping"": 0.7}",0.9551,0.8584,0.9545,0.6415,0.891,0.9535,0.9792,,
+2wiki,GTE-large,aware,gcs,both,lam1,"{""a"": 0.9}",0.944,0.8439,0.9426,0.627,0.8555,0.9521,0.9879,,
+2wiki,GTE-large,aware,bfs,both,lam4,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.3}",0.959,0.8642,0.9561,0.6535,0.8885,0.9501,0.9879,0.2142,0.0533
+2wiki,GTE-large,aware,ge,both,lam4,"{""ge_alpha"": 0.5, ""ge_hops"": 3}",0.9457,0.8227,0.9417,0.6225,0.868,0.9079,0.8929,,
+2wiki,GTE-large,aware,ppr,both,lam4,"{""damping"": 0.7}",0.951,0.8509,0.9507,0.6295,0.882,0.9499,0.9786,,
+2wiki,GTE-large,aware,gcs,both,lam4,"{""a"": 0.9}",0.9445,0.8439,0.9439,0.628,0.86,0.9522,0.9879,,
+2wiki,GTE-large,aware,bfs,both,idf,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.5}",0.9617,0.8688,0.958,0.66,0.8935,0.9508,0.9879,0.2144,0.0556
+2wiki,GTE-large,aware,ge,both,idf,"{""ge_alpha"": 0.3, ""ge_hops"": 3}",0.9424,0.8307,0.9387,0.6285,0.8575,0.925,0.9338,,
+2wiki,GTE-large,aware,ppr,both,idf,"{""damping"": 0.7}",0.9574,0.8581,0.9567,0.6425,0.8965,0.952,0.9773,,
+2wiki,GTE-large,aware,gcs,both,idf,"{""a"": 0.9}",0.9454,0.8444,0.9435,0.629,0.8585,0.9523,0.9879,,

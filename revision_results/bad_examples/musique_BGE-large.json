@@ -1,0 +1,7984 @@
+{
+ "dataset": "musique",
+ "retriever": "BGE-large",
+ "bfs_config": {
+  "top_k_bm25": 3,
+  "max_depth": 2,
+  "branch": 3,
+  "alpha": 0.7
+ },
+ "test_queries": 1209,
+ "queries_hurt_R@5": 98,
+ "failure_kinds": {
+  "off_query_relation": 45,
+  "ungrounded": 51,
+  "off_query_entity": 55,
+  "substring": 22,
+  "generic": 28
+ },
+ "candidates": [
+  {
+   "qid": "2hop__150866_11402",
+   "question": "According to the agency that published U.S. and World Population Clock, what is the total area in square miles?",
+   "score": 1.35,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    10,
+    1,
+    11,
+    9,
+    15
+   ],
+   "bfs_top5": [
+    10,
+    1,
+    11,
+    0,
+    4
+   ],
+   "gold": [
+    10,
+    15
+   ],
+   "lost_gold": [
+    15
+   ],
+   "intruders": [
+    0,
+    4
+   ],
+   "reasons": [
+    {
+     "intruder": 0,
+     "via": 10,
+     "edge": "U.S. and World Population Clock -[connected_to]-> USA",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 4,
+     "via": 1,
+     "edge": "USA -[connected_to]-> America",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 4,
+     "via": 1,
+     "edge": "America",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 4,
+     "via": 1,
+     "edge": "America",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 2
+    },
+    {
+     "lost_gold": 15,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 5
+  },
+  {
+   "qid": "2hop__13353_17738",
+   "question": "What area that abuts the country where the Prunus spinosa leaf much sooner still has some older people who speak West Flemish?",
+   "score": 1.3,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    0,
+    11,
+    9,
+    15,
+    12
+   ],
+   "bfs_top5": [
+    0,
+    11,
+    9,
+    15,
+    10
+   ],
+   "gold": [
+    0,
+    12
+   ],
+   "lost_gold": [
+    12
+   ],
+   "intruders": [
+    10
+   ],
+   "reasons": [
+    {
+     "intruder": 10,
+     "via": 0,
+     "edge": "West Flemish -[connected_to]-> area",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 10,
+     "via": 0,
+     "edge": "area",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 10,
+     "via": 0,
+     "edge": "area",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 4
+    },
+    {
+     "lost_gold": 12,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 10
+  },
+  {
+   "qid": "2hop__810411_159673",
+   "question": "What other film is the cast member of Now You See Him, Now You Don't a character for?",
+   "score": 1.25,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    13,
+    8,
+    4,
+    5,
+    11
+   ],
+   "bfs_top5": [
+    13,
+    8,
+    4,
+    12,
+    2
+   ],
+   "gold": [
+    5,
+    13
+   ],
+   "lost_gold": [
+    5
+   ],
+   "intruders": [
+    2,
+    12
+   ],
+   "reasons": [
+    {
+     "intruder": 2,
+     "via": 13,
+     "edge": "Now You See Him, Now You Don't -[connected_to]-> cast member",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 12,
+     "via": 13,
+     "edge": "Now You See Him, Now You Don't -[connected_to]-> cast member",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 5
+    },
+    {
+     "lost_gold": 5,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 15
+  },
+  {
+   "qid": "3hop1__699454_831637_91775",
+   "question": "What does seal stand for in the U.S. military branch that operates a list of destroyer classes, as well as the USS Sable?",
+   "score": 1.133,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    3,
+    9,
+    14,
+    13,
+    17
+   ],
+   "bfs_top5": [
+    3,
+    9,
+    14,
+    5,
+    16
+   ],
+   "gold": [
+    3,
+    13,
+    14
+   ],
+   "lost_gold": [
+    13
+   ],
+   "intruders": [
+    5,
+    16
+   ],
+   "reasons": [
+    {
+     "intruder": 5,
+     "via": 3,
+     "edge": "seal",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 5,
+     "via": 3,
+     "edge": "seal",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 16,
+     "via": 3,
+     "edge": "seal",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 16,
+     "via": 3,
+     "edge": "seal",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "lost_gold": 13,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 10
+  },
+  {
+   "qid": "3hop1__539312_744503_34754",
+   "question": "What does the U.S. believe caused the country where the birthplace of Yaovabha Bongsanid is located, to help Japan?",
+   "score": 1.107,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    14,
+    2,
+    6,
+    13,
+    10
+   ],
+   "bfs_top5": [
+    14,
+    2,
+    6,
+    4,
+    0
+   ],
+   "gold": [
+    10,
+    13,
+    14
+   ],
+   "lost_gold": [
+    10,
+    13
+   ],
+   "intruders": [
+    0,
+    4
+   ],
+   "reasons": [
+    {
+     "intruder": 0,
+     "via": 14,
+     "edge": "U.S.",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 0,
+     "via": 14,
+     "edge": "U.S.",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 0,
+     "via": 14,
+     "edge": "Japan",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 0,
+     "via": 14,
+     "edge": "Japan",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 4,
+     "via": 14,
+     "edge": "U.S.",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 4,
+     "via": 14,
+     "edge": "U.S.",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 4,
+     "via": 14,
+     "edge": "Japan",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 4,
+     "via": 14,
+     "edge": "Japan",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 7
+    },
+    {
+     "lost_gold": 10,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    },
+    {
+     "lost_gold": 13,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 66
+  },
+  {
+   "qid": "2hop__832795_350510",
+   "question": "What group was the performer of Be the One a member of?",
+   "score": 1.06,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    8,
+    0,
+    6,
+    17,
+    1
+   ],
+   "bfs_top5": [
+    8,
+    0,
+    6,
+    1,
+    18
+   ],
+   "gold": [
+    8,
+    17
+   ],
+   "lost_gold": [
+    17
+   ],
+   "intruders": [
+    18
+   ],
+   "reasons": [
+    {
+     "intruder": 18,
+     "via": 0,
+     "edge": "group",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 18,
+     "via": 0,
+     "edge": "group",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 2
+    },
+    {
+     "lost_gold": 17,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 4
+  },
+  {
+   "qid": "2hop__23297_23366",
+   "question": "Why did the leader who broke the Molotov\u2013Ribbentrop Pact by invading Bukovina first sign it?",
+   "score": 1.04,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    12,
+    7,
+    4,
+    0,
+    1
+   ],
+   "bfs_top5": [
+    12,
+    7,
+    4,
+    0,
+    3
+   ],
+   "gold": [
+    0,
+    1
+   ],
+   "lost_gold": [
+    1
+   ],
+   "intruders": [
+    3
+   ],
+   "reasons": [
+    {
+     "intruder": 3,
+     "via": 12,
+     "edge": "Bukovina",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 3,
+     "via": 12,
+     "edge": "Bukovina",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "lost_gold": 1,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 6
+  },
+  {
+   "qid": "2hop__414193_176917",
+   "question": "Who is married to the cast member of Carolina Moon?",
+   "score": 0.95,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    19,
+    3,
+    10,
+    12,
+    1
+   ],
+   "bfs_top5": [
+    19,
+    3,
+    10,
+    13,
+    9
+   ],
+   "gold": [
+    12,
+    19
+   ],
+   "lost_gold": [
+    12
+   ],
+   "intruders": [
+    9,
+    13
+   ],
+   "reasons": [
+    {
+     "intruder": 9,
+     "via": 19,
+     "edge": "cast member -[is from film]-> Carolina Moon",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 13,
+     "via": 19,
+     "edge": "cast member -[is from film]-> Carolina Moon",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 5
+    },
+    {
+     "lost_gold": 12,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 15
+  },
+  {
+   "qid": "4hop1__93601_46196_497223_15840",
+   "question": "What is the abbreviated name of the exclusive platform of the video game named for the league with a halftime event just before the publishers clearing house sweepstakes drawing.",
+   "score": 0.95,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    16,
+    14,
+    15,
+    5,
+    8
+   ],
+   "bfs_top5": [
+    16,
+    14,
+    15,
+    12,
+    7
+   ],
+   "gold": [
+    5,
+    8,
+    15,
+    16
+   ],
+   "lost_gold": [
+    5,
+    8
+   ],
+   "intruders": [
+    7,
+    12
+   ],
+   "reasons": [
+    {
+     "intruder": 7,
+     "via": 16,
+     "edge": "video game",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 7,
+     "via": 16,
+     "edge": "video game",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 12,
+     "via": 16,
+     "edge": "video game",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 12,
+     "via": 16,
+     "edge": "video game",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "lost_gold": 5,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    },
+    {
+     "lost_gold": 8,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 15
+  },
+  {
+   "qid": "3hop1__135793_87694_64412",
+   "question": "When did the location of the basilica named after the same saint at San Pietro in Ciel d'Oro become its own country?",
+   "score": 0.893,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    17,
+    4,
+    18,
+    19,
+    2
+   ],
+   "bfs_top5": [
+    17,
+    4,
+    18,
+    19,
+    10
+   ],
+   "gold": [
+    2,
+    4,
+    17
+   ],
+   "lost_gold": [
+    2
+   ],
+   "intruders": [
+    10
+   ],
+   "reasons": [
+    {
+     "intruder": 10,
+     "via": 18,
+     "edge": "country",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 10,
+     "via": 18,
+     "edge": "country",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "lost_gold": 2,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 4
+  },
+  {
+   "qid": "2hop__96410_47902",
+   "question": "Who is the actor who plays the title character in The Bourne Betrayal?",
+   "score": 0.89,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    17,
+    9,
+    2,
+    0,
+    13
+   ],
+   "bfs_top5": [
+    17,
+    9,
+    2,
+    12,
+    0
+   ],
+   "gold": [
+    13,
+    17
+   ],
+   "lost_gold": [
+    13
+   ],
+   "intruders": [
+    12
+   ],
+   "reasons": [
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "The Bourne Betrayal -[connected_to]-> Jason Bourne series",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "The Bourne Betrayal -[connected_to]-> Jason Bourne series",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "Novel -[connected_to]-> The Bourne Betrayal",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "Novel -[connected_to]-> The Bourne Betrayal",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "Novel -[connected_to]-> The Bourne Betrayal",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "Novel -[connected_to]-> The Bourne Betrayal",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "The Bourne Betrayal -[connected_to]-> Eric Van Lustbader",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "The Bourne Betrayal -[connected_to]-> Eric Van Lustbader",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "Novel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "Novel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "Jason Bourne series",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "Jason Bourne series",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "The Bourne Betrayal",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "The Bourne Betrayal",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "Eric Van Lustbader",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "Eric Van Lustbader",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "lost_gold": 13,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 21
+  },
+  {
+   "qid": "3hop1__534450_831637_91775",
+   "question": "What does seal stand for in the division of the U.S. military branch that operates destroyer classes and the USS Chinquapin?",
+   "score": 0.883,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    4,
+    2,
+    11,
+    12,
+    6
+   ],
+   "bfs_top5": [
+    4,
+    2,
+    11,
+    12,
+    8
+   ],
+   "gold": [
+    4,
+    6,
+    11
+   ],
+   "lost_gold": [
+    6
+   ],
+   "intruders": [
+    8
+   ],
+   "reasons": [
+    {
+     "intruder": 8,
+     "via": 4,
+     "edge": "Seal -[is component of]-> U.S. Navy",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 8,
+     "via": 4,
+     "edge": "Seal -[is main function]-> Special Operations",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 8,
+     "via": 4,
+     "edge": "Seal -[is main function]-> Special Operations",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 8,
+     "via": 4,
+     "edge": "Special Operations",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 8,
+     "via": 4,
+     "edge": "Special Operations",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 8,
+     "via": 4,
+     "edge": "Seal",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 8,
+     "via": 4,
+     "edge": "Seal",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 6
+    }
+   ],
+   "n_connected_pairs": 25
+  },
+  {
+   "qid": "3hop1__46571_87694_124169",
+   "question": "When did the Governor of the city where the Basilica named after the saint holding the knife in the Last Supper is located in end?",
+   "score": 0.873,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    2,
+    18,
+    17,
+    0,
+    19
+   ],
+   "bfs_top5": [
+    2,
+    18,
+    17,
+    0,
+    15
+   ],
+   "gold": [
+    17,
+    18,
+    19
+   ],
+   "lost_gold": [
+    19
+   ],
+   "intruders": [
+    15
+   ],
+   "reasons": [
+    {
+     "intruder": 15,
+     "via": 18,
+     "edge": "St. Peter's Basilica -[Located in]-> Vatican City",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "lost_gold": 19,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 6
+  },
+  {
+   "qid": "3hop1__593288_720914_27537",
+   "question": "Why did Roncalli leave the place where Violante's painter died?",
+   "score": 0.873,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    16,
+    2,
+    19,
+    14,
+    4
+   ],
+   "bfs_top5": [
+    16,
+    2,
+    19,
+    4,
+    9
+   ],
+   "gold": [
+    2,
+    14,
+    16
+   ],
+   "lost_gold": [
+    14
+   ],
+   "intruders": [
+    9
+   ],
+   "reasons": [
+    {
+     "intruder": 9,
+     "via": 2,
+     "edge": "Violante",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 9,
+     "via": 2,
+     "edge": "Violante",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "lost_gold": 14,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 6
+  },
+  {
+   "qid": "2hop__519160_78303",
+   "question": "What was the name of Forced Vengeance's producer in Walker, Texas Ranger?",
+   "score": 0.85,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    4,
+    17,
+    16,
+    15,
+    3
+   ],
+   "bfs_top5": [
+    4,
+    17,
+    16,
+    3,
+    1
+   ],
+   "gold": [
+    3,
+    15
+   ],
+   "lost_gold": [
+    15
+   ],
+   "intruders": [
+    1
+   ],
+   "reasons": [
+    {
+     "intruder": 1,
+     "via": 4,
+     "edge": "Sheree Julienne Wilson -[Alex Cahill - Walker]-> Walker, Texas Ranger",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 1,
+     "via": 4,
+     "edge": "Walker, Texas Ranger",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 1,
+     "via": 4,
+     "edge": "Walker, Texas Ranger",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    }
+   ],
+   "n_connected_pairs": 15
+  },
+  {
+   "qid": "2hop__650138_22402",
+   "question": "How many students attend the school where Max Huber attended?",
+   "score": 0.85,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    5,
+    14,
+    16,
+    1,
+    3
+   ],
+   "bfs_top5": [
+    5,
+    14,
+    16,
+    3,
+    9
+   ],
+   "gold": [
+    1,
+    16
+   ],
+   "lost_gold": [
+    1
+   ],
+   "intruders": [
+    9
+   ],
+   "reasons": [
+    {
+     "intruder": 9,
+     "via": 5,
+     "edge": "school",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 9,
+     "via": 5,
+     "edge": "school",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 10
+    },
+    {
+     "lost_gold": 1,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 55
+  },
+  {
+   "qid": "2hop__95773_51329",
+   "question": "What movie did the person who acted in the comedy film Crime School win his only Oscar for?",
+   "score": 0.82,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    3,
+    8,
+    2,
+    12,
+    9
+   ],
+   "bfs_top5": [
+    3,
+    8,
+    2,
+    19,
+    10
+   ],
+   "gold": [
+    3,
+    9
+   ],
+   "lost_gold": [
+    9
+   ],
+   "intruders": [
+    10,
+    19
+   ],
+   "reasons": [
+    {
+     "intruder": 10,
+     "via": 3,
+     "edge": "Crime School -[connected_to]-> Comedy film",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 19,
+     "via": 3,
+     "edge": "Crime School -[connected_to]-> Comedy film",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "lost_gold": 9,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 28
+  },
+  {
+   "qid": "3hop1__108833_720914_27537",
+   "question": "Why did Roncalli leave the place where artist who made The Bacchanal of the Andrians died?",
+   "score": 0.783,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    3,
+    14,
+    5,
+    11,
+    8
+   ],
+   "bfs_top5": [
+    3,
+    14,
+    5,
+    11,
+    9
+   ],
+   "gold": [
+    3,
+    8,
+    14
+   ],
+   "lost_gold": [
+    8
+   ],
+   "intruders": [
+    9
+   ],
+   "reasons": [
+    {
+     "intruder": 9,
+     "via": 14,
+     "edge": "Roncalli -[connected_to]-> place",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    },
+    {
+     "lost_gold": 8,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 15
+  },
+  {
+   "qid": "3hop1__462125_538202_84283",
+   "question": "Who is the owner of the record label that the performer of Days of Our Lives is on?",
+   "score": 0.783,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    7,
+    15,
+    18,
+    3,
+    5
+   ],
+   "bfs_top5": [
+    7,
+    15,
+    18,
+    3,
+    17
+   ],
+   "gold": [
+    3,
+    5,
+    7
+   ],
+   "lost_gold": [
+    5
+   ],
+   "intruders": [
+    17
+   ],
+   "reasons": [
+    {
+     "intruder": 17,
+     "via": 7,
+     "edge": "Mercury Nashville Records -[is_a]-> record label",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    },
+    {
+     "lost_gold": 5,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 15
+  },
+  {
+   "qid": "3hop1__102461_24918_24991",
+   "question": "What went down after the Soviet President visiting the the birth country of Andrey Dashkov while the protests were taking place departed from the Kremlin?",
+   "score": 0.753,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    16,
+    19,
+    6,
+    7,
+    0
+   ],
+   "bfs_top5": [
+    16,
+    19,
+    6,
+    1,
+    11
+   ],
+   "gold": [
+    0,
+    6,
+    19
+   ],
+   "lost_gold": [
+    0
+   ],
+   "intruders": [
+    1,
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 1,
+     "via": 16,
+     "edge": "Kremlin",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 1,
+     "via": 16,
+     "edge": "Kremlin",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 11,
+     "via": 16,
+     "edge": "Kremlin",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 11,
+     "via": 16,
+     "edge": "Kremlin",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "lost_gold": 0,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 18
+  },
+  {
+   "qid": "2hop__286621_84856",
+   "question": "When does the new season of the show named for the Politically Incorrect cast member?",
+   "score": 0.74,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    17,
+    15,
+    6,
+    0,
+    12
+   ],
+   "bfs_top5": [
+    17,
+    15,
+    6,
+    0,
+    19
+   ],
+   "gold": [
+    12,
+    17
+   ],
+   "lost_gold": [
+    12
+   ],
+   "intruders": [
+    19
+   ],
+   "reasons": [
+    {
+     "intruder": 19,
+     "via": 17,
+     "edge": "show -[is named after]-> Politically Incorrect",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 19,
+     "via": 17,
+     "edge": "show",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 19,
+     "via": 17,
+     "edge": "show",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "lost_gold": 12,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 36
+  },
+  {
+   "qid": "3hop1__617062_127905_46748",
+   "question": "What is the longest win streak in the league that Jim Wilson's team plays for?",
+   "score": 0.733,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    16,
+    11,
+    1,
+    13,
+    14
+   ],
+   "bfs_top5": [
+    16,
+    11,
+    1,
+    14,
+    15
+   ],
+   "gold": [
+    13,
+    14,
+    16
+   ],
+   "lost_gold": [
+    13
+   ],
+   "intruders": [
+    15
+   ],
+   "reasons": [
+    {
+     "intruder": 15,
+     "via": 16,
+     "edge": "Major League Baseball",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 15,
+     "via": 16,
+     "edge": "Major League Baseball",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    }
+   ],
+   "n_connected_pairs": 10
+  },
+  {
+   "qid": "3hop1__251085_831637_91775",
+   "question": "what does seal stand for in the operator of the list of destroyer classes of the operator of the USS Grouse seals?",
+   "score": 0.733,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    9,
+    5,
+    17,
+    6,
+    7
+   ],
+   "bfs_top5": [
+    9,
+    5,
+    17,
+    14,
+    6
+   ],
+   "gold": [
+    5,
+    7,
+    9
+   ],
+   "lost_gold": [
+    7
+   ],
+   "intruders": [
+    14
+   ],
+   "reasons": [
+    {
+     "intruder": 14,
+     "via": 9,
+     "edge": "SEALs -[connected_to]-> Sea, Air, and Land",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 14,
+     "via": 9,
+     "edge": "SEALs",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 14,
+     "via": 9,
+     "edge": "SEALs",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    }
+   ],
+   "n_connected_pairs": 10
+  },
+  {
+   "qid": "3hop1__801799_547811_41132",
+   "question": "How many times did plague occur in the birth city of the composer of La fida ninfa?",
+   "score": 0.713,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    14,
+    7,
+    17,
+    9,
+    12
+   ],
+   "bfs_top5": [
+    14,
+    7,
+    17,
+    12,
+    18
+   ],
+   "gold": [
+    7,
+    9,
+    14
+   ],
+   "lost_gold": [
+    9
+   ],
+   "intruders": [
+    18
+   ],
+   "reasons": [
+    {
+     "intruder": 18,
+     "via": 14,
+     "edge": "Verona -[connected_to]-> plague",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "lost_gold": 9,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 22
+  },
+  {
+   "qid": "2hop__88834_356793",
+   "question": "Who is the father of Nim's actress in Return to Nim's Island?",
+   "score": 0.7,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    4,
+    19,
+    10,
+    13,
+    5
+   ],
+   "bfs_top5": [
+    4,
+    19,
+    10,
+    9,
+    14
+   ],
+   "gold": [
+    4,
+    13
+   ],
+   "lost_gold": [
+    13
+   ],
+   "intruders": [
+    9,
+    14
+   ],
+   "reasons": [
+    {
+     "intruder": 9,
+     "via": 4,
+     "edge": "Return to Nim's Island -[connected_to]-> Nim",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 9,
+     "via": 4,
+     "edge": "Nim",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 9,
+     "via": 4,
+     "edge": "Nim",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 14,
+     "via": 4,
+     "edge": "Return to Nim's Island -[connected_to]-> Nim",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 14,
+     "via": 4,
+     "edge": "Nim",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 14,
+     "via": 4,
+     "edge": "Nim",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    }
+   ],
+   "n_connected_pairs": 30
+  },
+  {
+   "qid": "2hop__72686_83769",
+   "question": "Who did the actor who played Batman in the new Justice League play in Dazed and Confused?",
+   "score": 0.65,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    14,
+    18,
+    2,
+    11,
+    0
+   ],
+   "bfs_top5": [
+    14,
+    18,
+    2,
+    11,
+    1
+   ],
+   "gold": [
+    0,
+    11
+   ],
+   "lost_gold": [
+    0
+   ],
+   "intruders": [
+    1
+   ],
+   "reasons": [
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Ben Affleck -[connected_to]-> Batman",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Gal Gadot -[connected_to]-> Wonder Woman",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Gal Gadot -[connected_to]-> Wonder Woman",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Justice League -[connected_to]-> Batman",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Justice League -[connected_to]-> Batman",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Justice League -[connected_to]-> Wonder Woman",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Justice League -[connected_to]-> Wonder Woman",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Wonder Woman",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Wonder Woman",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Gal Gadot",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Gal Gadot",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Justice League",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Justice League",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Batman",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 1,
+     "via": 14,
+     "edge": "Batman",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    }
+   ],
+   "n_connected_pairs": 55
+  },
+  {
+   "qid": "2hop__25788_25855",
+   "question": "Drives attached via an industry standard connector remain powered when the computer is off using what Dell feature?",
+   "score": 0.64,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    7,
+    4,
+    13,
+    10,
+    2
+   ],
+   "bfs_top5": [
+    7,
+    4,
+    13,
+    19,
+    15
+   ],
+   "gold": [
+    7,
+    10
+   ],
+   "lost_gold": [
+    10
+   ],
+   "intruders": [
+    15,
+    19
+   ],
+   "reasons": [
+    {
+     "intruder": 15,
+     "via": 7,
+     "edge": "Dell -[connected_to]-> PowerShare",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 15,
+     "via": 7,
+     "edge": "Dell",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 15,
+     "via": 7,
+     "edge": "Dell",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 19,
+     "via": 7,
+     "edge": "Dell -[connected_to]-> PowerShare",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 19,
+     "via": 7,
+     "edge": "Dell",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 19,
+     "via": 7,
+     "edge": "Dell",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    }
+   ],
+   "n_connected_pairs": 36
+  },
+  {
+   "qid": "2hop__1667_40501",
+   "question": "How many refugees emigrated to the nation that founded New Amsterdam?",
+   "score": 0.64,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    10,
+    14,
+    0,
+    6,
+    7
+   ],
+   "bfs_top5": [
+    10,
+    14,
+    0,
+    6,
+    11
+   ],
+   "gold": [
+    7,
+    10
+   ],
+   "lost_gold": [
+    7
+   ],
+   "intruders": [
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 11,
+     "via": 10,
+     "edge": "refugees",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 11,
+     "via": 10,
+     "edge": "refugees",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "lost_gold": 7,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 66
+  },
+  {
+   "qid": "4hop1__88342_75218_128008_92225",
+   "question": "When is the opening day of the league, that includes the team that played in the most games. of the event that the MLB MVP award is handed out after?",
+   "score": 0.64,
+   "R@5_base": 0.5,
+   "R@5_bfs": 0.25,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    11,
+    9,
+    4,
+    2,
+    3
+   ],
+   "bfs_top5": [
+    11,
+    9,
+    4,
+    16,
+    2
+   ],
+   "gold": [
+    3,
+    4,
+    5,
+    17
+   ],
+   "lost_gold": [
+    3
+   ],
+   "intruders": [
+    16
+   ],
+   "reasons": [
+    {
+     "intruder": 16,
+     "via": 11,
+     "edge": "event -[is associated with]-> date",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 1
+    },
+    {
+     "lost_gold": 3,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 1
+  },
+  {
+   "qid": "3hop1__390673_228453_86925",
+   "question": "What is the manufacturer of the Kentucky Tavern headquarters location saints symbol called?",
+   "score": 0.573,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    10,
+    19,
+    4,
+    7,
+    2
+   ],
+   "bfs_top5": [
+    10,
+    19,
+    4,
+    6,
+    11
+   ],
+   "gold": [
+    4,
+    7,
+    10
+   ],
+   "lost_gold": [
+    7
+   ],
+   "intruders": [
+    6,
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 6,
+     "via": 10,
+     "edge": "Kentucky Tavern -[connected_to]-> Kentucky",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 6,
+     "via": 10,
+     "edge": "Kentucky",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 6,
+     "via": 10,
+     "edge": "Kentucky",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 11,
+     "via": 10,
+     "edge": "Kentucky Tavern -[connected_to]-> Kentucky",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 11,
+     "via": 10,
+     "edge": "Kentucky",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 11,
+     "via": 10,
+     "edge": "Kentucky",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "lost_gold": 7,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 36
+  },
+  {
+   "qid": "4hop1__39871_314549_131976_56103",
+   "question": "When do hurricanes occur in the ocean that borders the state where Williamsburg, Main Street Station and another share a track?",
+   "score": 0.57,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.75,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    19,
+    13,
+    17,
+    11,
+    8
+   ],
+   "bfs_top5": [
+    19,
+    13,
+    17,
+    8,
+    16
+   ],
+   "gold": [
+    8,
+    11,
+    13,
+    19
+   ],
+   "lost_gold": [
+    11
+   ],
+   "intruders": [
+    16
+   ],
+   "reasons": [
+    {
+     "intruder": 16,
+     "via": 19,
+     "edge": "Williamsburg -[is in]-> Brooklyn",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 16,
+     "via": 19,
+     "edge": "Williamsburg",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 16,
+     "via": 19,
+     "edge": "Williamsburg",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    }
+   ],
+   "n_connected_pairs": 18
+  },
+  {
+   "qid": "2hop__141365_417697",
+   "question": "What is Mohamed Atta's car, manufactured by the company that includes Datsun, an instance of?",
+   "score": 0.57,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    15,
+    4,
+    3,
+    12,
+    17
+   ],
+   "bfs_top5": [
+    15,
+    4,
+    3,
+    17,
+    9
+   ],
+   "gold": [
+    12,
+    15
+   ],
+   "lost_gold": [
+    12
+   ],
+   "intruders": [
+    9
+   ],
+   "reasons": [
+    {
+     "intruder": 9,
+     "via": 15,
+     "edge": "Datsun -[is manufactured by]-> Nissan",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 9,
+     "via": 15,
+     "edge": "Datsun -[is manufactured by]-> Nissan",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 9,
+     "via": 15,
+     "edge": "Datsun",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 9,
+     "via": 15,
+     "edge": "Datsun",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 9,
+     "via": 15,
+     "edge": "Nissan",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 9,
+     "via": 15,
+     "edge": "Nissan",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    }
+   ],
+   "n_connected_pairs": 43
+  },
+  {
+   "qid": "2hop__20685_712629",
+   "question": "Who was the spouse of the British queen?",
+   "score": 0.55,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    19,
+    3,
+    1,
+    14,
+    13
+   ],
+   "bfs_top5": [
+    19,
+    3,
+    1,
+    15,
+    4
+   ],
+   "gold": [
+    1,
+    13
+   ],
+   "lost_gold": [
+    13
+   ],
+   "intruders": [
+    4,
+    15
+   ],
+   "reasons": [
+    {
+     "intruder": 4,
+     "via": 19,
+     "edge": "Queen Victoria -[Great-great-granddaughter of]-> Queen Elizabeth II",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 4,
+     "via": 19,
+     "edge": "Queen Mary -[Aunt (relative to)]-> Queen Elizabeth II",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 4,
+     "via": 19,
+     "edge": "Queen Elizabeth II -[Vested authority in]-> Governor of Saint Helena",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 4,
+     "via": 19,
+     "edge": "Queen Elizabeth II",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 4,
+     "via": 19,
+     "edge": "Queen Elizabeth II",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 15,
+     "via": 19,
+     "edge": "Queen Victoria -[Great-great-granddaughter of]-> Queen Elizabeth II",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 15,
+     "via": 19,
+     "edge": "Queen Victoria -[Great-great-granddaughter of]-> Queen Elizabeth II",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 15,
+     "via": 19,
+     "edge": "Queen Mary -[Aunt (relative to)]-> Queen Elizabeth II",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 15,
+     "via": 19,
+     "edge": "Queen Elizabeth II",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 15,
+     "via": 19,
+     "edge": "Queen Elizabeth II",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 15,
+     "via": 19,
+     "edge": "Queen Victoria",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 15,
+     "via": 19,
+     "edge": "Queen Victoria",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    }
+   ],
+   "n_connected_pairs": 45
+  },
+  {
+   "qid": "4hop1__51465_53706_795904_580996",
+   "question": "What shares a border with the city where the person who went to the state where most billionaires in America live during the gold rush works?",
+   "score": 0.53,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    11,
+    14,
+    4,
+    3,
+    12
+   ],
+   "bfs_top5": [
+    11,
+    14,
+    4,
+    15,
+    17
+   ],
+   "gold": [
+    0,
+    11,
+    12,
+    14
+   ],
+   "lost_gold": [
+    12
+   ],
+   "intruders": [
+    15,
+    17
+   ],
+   "reasons": [
+    {
+     "intruder": 15,
+     "via": 11,
+     "edge": "state",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 15,
+     "via": 11,
+     "edge": "state",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 17,
+     "via": 11,
+     "edge": "state",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 17,
+     "via": 11,
+     "edge": "state",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "lost_gold": 12,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 12
+  },
+  {
+   "qid": "2hop__25797_990",
+   "question": "Which iPod generation introduced compatibility with the industry standard connection that was first widely used at version 1.1?",
+   "score": 0.53,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    5,
+    1,
+    2,
+    10,
+    17
+   ],
+   "bfs_top5": [
+    5,
+    1,
+    2,
+    17,
+    15
+   ],
+   "gold": [
+    5,
+    10
+   ],
+   "lost_gold": [
+    10
+   ],
+   "intruders": [
+    15
+   ],
+   "reasons": [
+    {
+     "intruder": 15,
+     "via": 5,
+     "edge": "iPod",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 15,
+     "via": 5,
+     "edge": "iPod",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    }
+   ],
+   "n_connected_pairs": 67
+  },
+  {
+   "qid": "3hop1__465684_160545_60577",
+   "question": "Where did they film The Beach in the country where Bodindecha died?",
+   "score": 0.523,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    11,
+    6,
+    19,
+    17,
+    14
+   ],
+   "bfs_top5": [
+    11,
+    6,
+    19,
+    10,
+    0
+   ],
+   "gold": [
+    14,
+    16,
+    19
+   ],
+   "lost_gold": [
+    14
+   ],
+   "intruders": [
+    0,
+    10
+   ],
+   "reasons": [
+    {
+     "intruder": 0,
+     "via": 6,
+     "edge": "The Beach",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 0,
+     "via": 6,
+     "edge": "The Beach",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 10,
+     "via": 6,
+     "edge": "The Beach",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 10,
+     "via": 6,
+     "edge": "The Beach",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    }
+   ],
+   "n_connected_pairs": 11
+  },
+  {
+   "qid": "4hop3__839787_88460_30152_20999",
+   "question": "How were the same people who the Somali Muslim Ajuran Empire declared independence from expelled from the natural boundary between Thailand and the country where Sepon mine is found?",
+   "score": 0.5,
+   "R@5_base": 0.5,
+   "R@5_bfs": 0.25,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    12,
+    9,
+    1,
+    13,
+    4
+   ],
+   "bfs_top5": [
+    12,
+    9,
+    1,
+    14,
+    0
+   ],
+   "gold": [
+    1,
+    3,
+    13,
+    17
+   ],
+   "lost_gold": [
+    13
+   ],
+   "intruders": [
+    0,
+    14
+   ],
+   "reasons": [
+    {
+     "intruder": 0,
+     "via": 12,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 0,
+     "via": 12,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 14,
+     "via": 12,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 14,
+     "via": 12,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 6
+    },
+    {
+     "lost_gold": 13,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 15
+  },
+  {
+   "qid": "3hop1__759384_42197_18397",
+   "question": "Where did the person who argued that the country that Mark Fradkin is a citizen of had become an imperialist power declare he would intervene in the Korean conflict?",
+   "score": 0.493,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    8,
+    6,
+    12,
+    1,
+    9
+   ],
+   "bfs_top5": [
+    8,
+    6,
+    12,
+    11,
+    9
+   ],
+   "gold": [
+    1,
+    6,
+    12
+   ],
+   "lost_gold": [
+    1
+   ],
+   "intruders": [
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "Soviet Union -[connected_to]-> imperialism",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "Korea",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "Korea",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    }
+   ],
+   "n_connected_pairs": 34
+  },
+  {
+   "qid": "3hop1__140345_2053_52946",
+   "question": "When is Celebrity Big Brother coming to the network which, along with ABC and the network which aired Law of the Plainsman, is the other major broadcaster based in NY?",
+   "score": 0.483,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    15,
+    9,
+    5,
+    16,
+    10
+   ],
+   "bfs_top5": [
+    15,
+    9,
+    5,
+    16,
+    7
+   ],
+   "gold": [
+    5,
+    10,
+    15
+   ],
+   "lost_gold": [
+    10
+   ],
+   "intruders": [
+    7
+   ],
+   "reasons": [
+    {
+     "intruder": 7,
+     "via": 15,
+     "edge": "Celebrity Big Brother -[connected_to]-> CBS",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 7,
+     "via": 15,
+     "edge": "Celebrity Big Brother -[connected_to]-> 2018",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 7,
+     "via": 15,
+     "edge": "Celebrity Big Brother -[connected_to]-> February 7, 2018",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 7,
+     "via": 15,
+     "edge": "Celebrity Big Brother",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 7,
+     "via": 15,
+     "edge": "Celebrity Big Brother",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    }
+   ],
+   "n_connected_pairs": 35
+  },
+  {
+   "qid": "3hop1__140514_2053_5289",
+   "question": "What UK label was bought by the company which, along with ABC and the network which hosts Hero High, is the other major broadcaster based in NY?",
+   "score": 0.433,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    17,
+    3,
+    19,
+    8,
+    10
+   ],
+   "bfs_top5": [
+    17,
+    3,
+    19,
+    8,
+    12
+   ],
+   "gold": [
+    10,
+    17,
+    19
+   ],
+   "lost_gold": [
+    10
+   ],
+   "intruders": [
+    12
+   ],
+   "reasons": [
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "ABC -[has flagship news program (ABC World News Tonight) in the US]-> NY",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "NY",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 12,
+     "via": 17,
+     "edge": "NY",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 6
+    }
+   ],
+   "n_connected_pairs": 70
+  },
+  {
+   "qid": "3hop1__761225_831637_91775",
+   "question": "What does seal stand for in the branch of the U.S. military that operates a list of destroyer classes, as well as containing the rank O-1?",
+   "score": 0.413,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    14,
+    7,
+    6,
+    0,
+    9
+   ],
+   "bfs_top5": [
+    14,
+    7,
+    6,
+    9,
+    10
+   ],
+   "gold": [
+    0,
+    7,
+    14
+   ],
+   "lost_gold": [
+    0
+   ],
+   "intruders": [
+    10
+   ],
+   "reasons": [
+    {
+     "intruder": 10,
+     "via": 14,
+     "edge": "seal -[connected_to]-> U.S. Navy",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 10,
+     "via": 14,
+     "edge": "seal -[connected_to]-> special operations force",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 10,
+     "via": 14,
+     "edge": "seal",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 10,
+     "via": 14,
+     "edge": "seal",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    }
+   ],
+   "n_connected_pairs": 92
+  },
+  {
+   "qid": "2hop__159146_120065",
+   "question": "What year did the region where Leuna was located come to an end?",
+   "score": 0.39,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    2,
+    0,
+    8,
+    16,
+    5
+   ],
+   "bfs_top5": [
+    2,
+    0,
+    8,
+    16,
+    11
+   ],
+   "gold": [
+    5,
+    8
+   ],
+   "lost_gold": [
+    5
+   ],
+   "intruders": [
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 11,
+     "via": 2,
+     "edge": "Leuna -[connected_to]-> year",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "lost_gold": 5,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 91
+  },
+  {
+   "qid": "3hop1__132967_40769_64047",
+   "question": "When did the rx 350 model of the luxury division of the company that built Daihatsu boon change body style?",
+   "score": 0.373,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    13,
+    2,
+    11,
+    19,
+    18
+   ],
+   "bfs_top5": [
+    13,
+    2,
+    11,
+    18,
+    7
+   ],
+   "gold": [
+    4,
+    13,
+    19
+   ],
+   "lost_gold": [
+    19
+   ],
+   "intruders": [
+    7
+   ],
+   "reasons": [
+    {
+     "intruder": 7,
+     "via": 13,
+     "edge": "Daihatsu -[connected_to]-> Daihatsu",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 7,
+     "via": 13,
+     "edge": "Daihatsu -[connected_to]-> Daihatsu",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 7,
+     "via": 13,
+     "edge": "Daihatsu",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 7,
+     "via": 13,
+     "edge": "Daihatsu",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "lost_gold": 19,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 6
+  },
+  {
+   "qid": "2hop__69_59409",
+   "question": "Who was the artist who is associated with Beyonce's premiere solo recording talking about in the song \"Cry\"?",
+   "score": 0.34,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    12,
+    4,
+    14,
+    15,
+    3
+   ],
+   "bfs_top5": [
+    12,
+    4,
+    14,
+    3,
+    0
+   ],
+   "gold": [
+    4,
+    15
+   ],
+   "lost_gold": [
+    15
+   ],
+   "intruders": [
+    0
+   ],
+   "reasons": [
+    {
+     "intruder": 0,
+     "via": 4,
+     "edge": "artist -[is type of]-> artist",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 0,
+     "via": 4,
+     "edge": "artist -[is type of]-> artist",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 0,
+     "via": 4,
+     "edge": "artist",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 0,
+     "via": 4,
+     "edge": "artist",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    }
+   ],
+   "n_connected_pairs": 86
+  },
+  {
+   "qid": "4hop1__567737_141375_458768_33677",
+   "question": "When was the most recent Bicycle Friendly Community Award given to the city where the company Study in Brown's record label is part of is headquartered?",
+   "score": 0.31,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    8,
+    16,
+    19,
+    5,
+    1
+   ],
+   "bfs_top5": [
+    8,
+    16,
+    19,
+    9,
+    5
+   ],
+   "gold": [
+    1,
+    5,
+    8,
+    11
+   ],
+   "lost_gold": [
+    1
+   ],
+   "intruders": [
+    9
+   ],
+   "reasons": [
+    {
+     "intruder": 9,
+     "via": 8,
+     "edge": "Study in Brown -[connected_to]-> Clifford Brown",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 9,
+     "via": 8,
+     "edge": "Clifford Brown",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 9,
+     "via": 8,
+     "edge": "Clifford Brown",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "lost_gold": 1,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 4
+  },
+  {
+   "qid": "4hop1__88342_49853_128008_48717",
+   "question": "Who was the second pick in the 1999 draft of the organization, that includes the team with the most titles, in the event preceding the awarding of the MLB MVP?",
+   "score": 0.29,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    7,
+    10,
+    16,
+    8,
+    17
+   ],
+   "bfs_top5": [
+    7,
+    10,
+    16,
+    18,
+    13
+   ],
+   "gold": [
+    2,
+    10,
+    16,
+    17
+   ],
+   "lost_gold": [
+    17
+   ],
+   "intruders": [
+    13,
+    18
+   ],
+   "reasons": [
+    {
+     "intruder": 13,
+     "via": 7,
+     "edge": "year",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 13,
+     "via": 7,
+     "edge": "year",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 18,
+     "via": 7,
+     "edge": "year",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 18,
+     "via": 7,
+     "edge": "year",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "lost_gold": 17,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 6
+  },
+  {
+   "qid": "4hop2__71753_261673_70784_61381",
+   "question": "When was the region that lies to the north of where Israel is located and where Shamal is located established?",
+   "score": 0.29,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    1,
+    7,
+    0,
+    11,
+    15
+   ],
+   "bfs_top5": [
+    1,
+    7,
+    0,
+    11,
+    5
+   ],
+   "gold": [
+    1,
+    7,
+    14,
+    15
+   ],
+   "lost_gold": [
+    15
+   ],
+   "intruders": [
+    5
+   ],
+   "reasons": [
+    {
+     "intruder": 5,
+     "via": 7,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 5,
+     "via": 7,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "lost_gold": 15,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 6
+  },
+  {
+   "qid": "3hop1__128516_30587_83479",
+   "question": "What was Germany's main goal in the battle of the ocean adjacent to the US city having WEDR?",
+   "score": 0.283,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    1,
+    9,
+    5,
+    19,
+    4
+   ],
+   "bfs_top5": [
+    1,
+    9,
+    5,
+    2,
+    17
+   ],
+   "gold": [
+    1,
+    7,
+    19
+   ],
+   "lost_gold": [
+    19
+   ],
+   "intruders": [
+    2,
+    17
+   ],
+   "reasons": [
+    {
+     "intruder": 2,
+     "via": 1,
+     "edge": "Germany -[connected_to]-> Battle of the Atlantic",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 17,
+     "via": 1,
+     "edge": "Germany -[connected_to]-> Battle of the Atlantic",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 5
+    },
+    {
+     "lost_gold": 19,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 15
+  },
+  {
+   "qid": "3hop2__57233_11282_56883",
+   "question": "When was conscription introduced in country having Emus during the war setting The Things They Carried?",
+   "score": 0.273,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    2,
+    9,
+    11,
+    15,
+    18
+   ],
+   "bfs_top5": [
+    2,
+    9,
+    11,
+    15,
+    3
+   ],
+   "gold": [
+    2,
+    8,
+    18
+   ],
+   "lost_gold": [
+    18
+   ],
+   "intruders": [
+    3
+   ],
+   "reasons": [
+    {
+     "intruder": 3,
+     "via": 2,
+     "edge": "conscription",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 3,
+     "via": 2,
+     "edge": "conscription",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "lost_gold": 18,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 16
+  },
+  {
+   "qid": "4hop2__71753_648517_70784_79935",
+   "question": "When was the region immediately north of the region where Israel is located and the location of the Battle of Qurah and Umm al Maradim created?",
+   "score": 0.24,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    11,
+    6,
+    5,
+    9,
+    3
+   ],
+   "bfs_top5": [
+    11,
+    6,
+    5,
+    9,
+    16
+   ],
+   "gold": [
+    3,
+    5,
+    11,
+    13
+   ],
+   "lost_gold": [
+    3
+   ],
+   "intruders": [
+    16
+   ],
+   "reasons": [
+    {
+     "intruder": 16,
+     "via": 6,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 16,
+     "via": 6,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "lost_gold": 3,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 11
+  },
+  {
+   "qid": "2hop__622308_61845",
+   "question": "Who has played for West Ham Ajax and the team from the city where Malcolm Graham died?",
+   "score": 0.24,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    6,
+    11,
+    18,
+    16,
+    9
+   ],
+   "bfs_top5": [
+    6,
+    11,
+    18,
+    15,
+    0
+   ],
+   "gold": [
+    6,
+    16
+   ],
+   "lost_gold": [
+    16
+   ],
+   "intruders": [
+    0,
+    15
+   ],
+   "reasons": [
+    {
+     "intruder": 0,
+     "via": 6,
+     "edge": "Graham -[connected_to]-> Barnsley",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 0,
+     "via": 6,
+     "edge": "Graham -[connected_to]-> Bristol City",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 0,
+     "via": 6,
+     "edge": "Graham -[connected_to]-> Leyton Orient",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 0,
+     "via": 6,
+     "edge": "Graham",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 0,
+     "via": 6,
+     "edge": "Graham",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 15,
+     "via": 6,
+     "edge": "Graham -[connected_to]-> Barnsley",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 15,
+     "via": 6,
+     "edge": "Graham -[connected_to]-> Bristol City",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 15,
+     "via": 6,
+     "edge": "Graham -[connected_to]-> Leyton Orient",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 15,
+     "via": 6,
+     "edge": "Graham",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 15,
+     "via": 6,
+     "edge": "Graham",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    }
+   ],
+   "n_connected_pairs": 76
+  },
+  {
+   "qid": "3hop2__90327_89854_76291",
+   "question": "When did the party that holds the majority in the House of Representatives take control of the organization that approves the members of the U.S. cabinet before their appointment?",
+   "score": 0.223,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    11,
+    12,
+    18,
+    13,
+    10
+   ],
+   "bfs_top5": [
+    11,
+    12,
+    18,
+    10,
+    17
+   ],
+   "gold": [
+    11,
+    12,
+    13
+   ],
+   "lost_gold": [
+    13
+   ],
+   "intruders": [
+    17
+   ],
+   "reasons": [
+    {
+     "intruder": 17,
+     "via": 11,
+     "edge": "House of Representatives",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 13
+    },
+    {
+     "intruder": 17,
+     "via": 11,
+     "edge": "House of Representatives",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 13
+    },
+    {
+     "lost_gold": 13,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 91
+  },
+  {
+   "qid": "4hop2__71753_158985_70784_61381",
+   "question": "When was the region immediately north of the region where Israel is located and the site of the most growth in desalination for agricultural use established?",
+   "score": 0.2,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    7,
+    8,
+    17,
+    9,
+    3
+   ],
+   "bfs_top5": [
+    7,
+    8,
+    17,
+    9,
+    0
+   ],
+   "gold": [
+    3,
+    7,
+    8,
+    11
+   ],
+   "lost_gold": [
+    3
+   ],
+   "intruders": [
+    0
+   ],
+   "reasons": [
+    {
+     "intruder": 0,
+     "via": 7,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 0,
+     "via": 7,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "lost_gold": 3,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 15
+  },
+  {
+   "qid": "2hop__85753_64503",
+   "question": "How deep is the Riverwalk in San Antonio in the state that still uses electric chair?",
+   "score": 0.15,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    13,
+    18,
+    19,
+    16,
+    10
+   ],
+   "bfs_top5": [
+    13,
+    18,
+    19,
+    8,
+    1
+   ],
+   "gold": [
+    16,
+    19
+   ],
+   "lost_gold": [
+    16
+   ],
+   "intruders": [
+    1,
+    8
+   ],
+   "reasons": [
+    {
+     "intruder": 1,
+     "via": 13,
+     "edge": "San Antonio -[connected_to]-> Texas",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 1,
+     "via": 13,
+     "edge": "San Antonio -[connected_to]-> Texas",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 1,
+     "via": 13,
+     "edge": "Texas",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 1,
+     "via": 13,
+     "edge": "Texas",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 1,
+     "via": 13,
+     "edge": "San Antonio",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 1,
+     "via": 13,
+     "edge": "San Antonio",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 13,
+     "edge": "Riverwalk -[connected_to]-> San Antonio",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 13,
+     "edge": "San Antonio -[connected_to]-> Texas",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 13,
+     "edge": "San Antonio -[connected_to]-> Texas",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 13,
+     "edge": "Texas -[connected_to]-> Riverwalk",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 8,
+     "via": 13,
+     "edge": "Texas",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 8,
+     "via": 13,
+     "edge": "Texas",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 8,
+     "via": 13,
+     "edge": "San Antonio",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 13,
+     "edge": "San Antonio",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    }
+   ],
+   "n_connected_pairs": 105
+  },
+  {
+   "qid": "3hop2__106842_30645_84681",
+   "question": "When did the people who first settled the Delaware Valley come to the country which produced the show @Seven?",
+   "score": 0.143,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    8,
+    17,
+    7,
+    15,
+    19
+   ],
+   "bfs_top5": [
+    8,
+    17,
+    7,
+    4,
+    11
+   ],
+   "gold": [
+    8,
+    15,
+    18
+   ],
+   "lost_gold": [
+    15
+   ],
+   "intruders": [
+    4,
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "Delaware Valley -[were first settled by]-> Dutch",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "Delaware Valley -[was settled by]-> early 17th century",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "Delaware Valley -[experienced]-> first settlements",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "Delaware Valley",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "Delaware Valley",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "Delaware Valley -[were first settled by]-> Dutch",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "Delaware Valley -[was settled by]-> early 17th century",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "Delaware Valley -[experienced]-> first settlements",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "Delaware Valley",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "Delaware Valley",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    }
+   ],
+   "n_connected_pairs": 19
+  },
+  {
+   "qid": "4hop2__71753_158985_70784_79935",
+   "question": "When was the region that lies to the north of where Israel is located and where the most growth in desalination for agricultural use is taking place created?",
+   "score": 0.14,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    15,
+    10,
+    8,
+    0,
+    3
+   ],
+   "bfs_top5": [
+    15,
+    10,
+    8,
+    11,
+    5
+   ],
+   "gold": [
+    0,
+    10,
+    15,
+    19
+   ],
+   "lost_gold": [
+    0
+   ],
+   "intruders": [
+    5,
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 5,
+     "via": 15,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 5,
+     "via": 15,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 11,
+     "via": 15,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 11,
+     "via": 15,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    }
+   ],
+   "n_connected_pairs": 11
+  },
+  {
+   "qid": "4hop3__547073_88460_30152_20999",
+   "question": "How were people from whom the new coins were a proclamation of independence by the Somali Muslim Ajuran Empire expelled from the country between Thailand and Si Phan Don's country?",
+   "score": 0.14,
+   "R@5_base": 0.5,
+   "R@5_bfs": 0.25,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    4,
+    18,
+    6,
+    16,
+    15
+   ],
+   "bfs_top5": [
+    4,
+    18,
+    6,
+    17,
+    3
+   ],
+   "gold": [
+    0,
+    2,
+    4,
+    16
+   ],
+   "lost_gold": [
+    16
+   ],
+   "intruders": [
+    3,
+    17
+   ],
+   "reasons": [
+    {
+     "intruder": 3,
+     "via": 18,
+     "edge": "Thailand",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 3,
+     "via": 18,
+     "edge": "Thailand",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 3,
+     "via": 18,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 3,
+     "via": 18,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 17,
+     "via": 18,
+     "edge": "people -[action_taken_to]-> expelled",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 17,
+     "via": 18,
+     "edge": "expelled -[location_boundary]-> Thailand",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 17,
+     "via": 18,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 17,
+     "via": 18,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 8
+    }
+   ],
+   "n_connected_pairs": 41
+  },
+  {
+   "qid": "4hop2__71753_158279_70784_61381",
+   "question": "When was the region immediately north of the region where Israel is located and the final destination for the export crops established?",
+   "score": 0.14,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    12,
+    17,
+    4,
+    16,
+    9
+   ],
+   "bfs_top5": [
+    12,
+    17,
+    4,
+    9,
+    8
+   ],
+   "gold": [
+    3,
+    4,
+    12,
+    16
+   ],
+   "lost_gold": [
+    16
+   ],
+   "intruders": [
+    8
+   ],
+   "reasons": [
+    {
+     "intruder": 8,
+     "via": 12,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 8,
+     "via": 12,
+     "edge": "Israel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "lost_gold": 16,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 21
+  },
+  {
+   "qid": "3hop1__624901_42197_18397",
+   "question": "Where did who argued the country of citizenship of Maya Kopitseva had itself become an imperialist power declare that he would intervene in the Korean conflict?",
+   "score": 0.133,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    7,
+    9,
+    17,
+    16,
+    2
+   ],
+   "bfs_top5": [
+    7,
+    9,
+    17,
+    15,
+    1
+   ],
+   "gold": [
+    7,
+    9,
+    16
+   ],
+   "lost_gold": [
+    16
+   ],
+   "intruders": [
+    1,
+    15
+   ],
+   "reasons": [
+    {
+     "intruder": 1,
+     "via": 7,
+     "edge": "who",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 1,
+     "via": 7,
+     "edge": "who",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 15,
+     "via": 7,
+     "edge": "who",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 15,
+     "via": 7,
+     "edge": "who",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    }
+   ],
+   "n_connected_pairs": 70
+  },
+  {
+   "qid": "3hop1__255970_831637_91775",
+   "question": "The military unit that operates destroyers and once had a ship named the USS Sanderling has a force called the seals. What does seal stand for?",
+   "score": 0.133,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    7,
+    8,
+    18,
+    5,
+    1
+   ],
+   "bfs_top5": [
+    7,
+    8,
+    18,
+    10,
+    5
+   ],
+   "gold": [
+    1,
+    7,
+    8
+   ],
+   "lost_gold": [
+    1
+   ],
+   "intruders": [
+    10
+   ],
+   "reasons": [
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "seals -[connected_to]-> sea",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "seals -[connected_to]-> sea",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "seals -[connected_to]-> air",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "seals -[connected_to]-> land",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "seals -[connected_to]-> land",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "land",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "land",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "sea",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "sea",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "seals",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 10,
+     "via": 7,
+     "edge": "seals",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 3
+    }
+   ],
+   "n_connected_pairs": 100
+  },
+  {
+   "qid": "4hop1__107309_457883_650651_7262",
+   "question": "The Embassy of the country where palitaw comes from is found in Bandar Seri Begawan in Country A. Who was a prominent figure at the radio division of the creator of The Biggest Loser at Country A?",
+   "score": 0.13,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    3,
+    4,
+    0,
+    16,
+    8
+   ],
+   "bfs_top5": [
+    3,
+    4,
+    0,
+    13,
+    11
+   ],
+   "gold": [
+    2,
+    3,
+    4,
+    16
+   ],
+   "lost_gold": [
+    16
+   ],
+   "intruders": [
+    11,
+    13
+   ],
+   "reasons": [
+    {
+     "intruder": 11,
+     "via": 3,
+     "edge": "The Biggest Loser",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 11,
+     "via": 3,
+     "edge": "The Biggest Loser",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 13,
+     "via": 3,
+     "edge": "The Biggest Loser",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 13,
+     "via": 3,
+     "edge": "The Biggest Loser",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    }
+   ],
+   "n_connected_pairs": 12
+  },
+  {
+   "qid": "3hop1__446612_160545_34751",
+   "question": "What year did the country where Ercole Manfredi was born form an alliance with Japan?",
+   "score": 0.083,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    17,
+    4,
+    12,
+    19,
+    3
+   ],
+   "bfs_top5": [
+    17,
+    4,
+    12,
+    3,
+    0
+   ],
+   "gold": [
+    4,
+    6,
+    19
+   ],
+   "lost_gold": [
+    19
+   ],
+   "intruders": [
+    0
+   ],
+   "reasons": [
+    {
+     "intruder": 0,
+     "via": 17,
+     "edge": "Japan",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 0,
+     "via": 17,
+     "edge": "Japan",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "lost_gold": 19,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 55
+  },
+  {
+   "qid": "4hop3__316459_41402_146281_13584",
+   "question": "A country gained control of Florida after the war in which Charles Edmund Nugent saw action. Besides their locations in that country, what other differences are there between Real Madrid and the football team from the city where Aleran died?",
+   "score": 0.07,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    12,
+    19,
+    18,
+    16,
+    7
+   ],
+   "bfs_top5": [
+    12,
+    19,
+    18,
+    7,
+    5
+   ],
+   "gold": [
+    4,
+    16,
+    18,
+    19
+   ],
+   "lost_gold": [
+    16
+   ],
+   "intruders": [
+    5
+   ],
+   "reasons": [
+    {
+     "intruder": 5,
+     "via": 12,
+     "edge": "Real Madrid",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 5,
+     "via": 12,
+     "edge": "Real Madrid",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "lost_gold": 16,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 28
+  },
+  {
+   "qid": "2hop__67057_52871",
+   "question": "After WWII, when did the US leave the nation it defeated at the Battle of Guadalcanal?",
+   "score": 0.07,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    5,
+    14,
+    19,
+    8,
+    7
+   ],
+   "bfs_top5": [
+    5,
+    14,
+    19,
+    7,
+    18
+   ],
+   "gold": [
+    8,
+    14
+   ],
+   "lost_gold": [
+    8
+   ],
+   "intruders": [
+    18
+   ],
+   "reasons": [
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "US -[involved in]-> Guadalcanal",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "US -[involved in]-> Guadalcanal",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Japanese -[fought at]-> Guadalcanal",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Japanese -[fought at]-> Guadalcanal",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "US -[defeated]-> Japanese",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "US -[defeated]-> Japanese",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Japanese -[abandoned]-> Guadalcanal",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Japanese -[abandoned]-> Guadalcanal",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Guadalcanal -[key event in]-> 1943",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Japanese -[evacuated from]-> Guadalcanal",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Japanese -[evacuated from]-> Guadalcanal",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Japanese",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Japanese",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "US",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "US",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Guadalcanal",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 18,
+     "via": 5,
+     "edge": "Guadalcanal",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "lost_gold": 8,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 153
+  },
+  {
+   "qid": "3hop1__540585_568433_51423",
+   "question": "What is the name of the castle in the city where the headquarters of the production company of Miss Spider's Sunny Patch Kids is located?",
+   "score": 0.063,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    16,
+    15,
+    11,
+    12,
+    10
+   ],
+   "bfs_top5": [
+    16,
+    15,
+    11,
+    13,
+    8
+   ],
+   "gold": [
+    9,
+    10,
+    15
+   ],
+   "lost_gold": [
+    10
+   ],
+   "intruders": [
+    8,
+    13
+   ],
+   "reasons": [
+    {
+     "intruder": 8,
+     "via": 11,
+     "edge": "production company -[connected_to]-> headquarters",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 8,
+     "via": 11,
+     "edge": "headquarters -[connected_to]-> city",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 8,
+     "via": 11,
+     "edge": "headquarters -[connected_to]-> city",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 8,
+     "via": 11,
+     "edge": "headquarters",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 8,
+     "via": 11,
+     "edge": "headquarters",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 8,
+     "via": 11,
+     "edge": "city",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 8,
+     "via": 11,
+     "edge": "city",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 4
+    },
+    {
+     "intruder": 13,
+     "via": 15,
+     "edge": "Miss Spider's Sunny Patch Kids -[connected_to]-> production company",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 2
+    },
+    {
+     "lost_gold": 10,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 37
+  },
+  {
+   "qid": "4hop3__316459_41402_145282_13584",
+   "question": "Besides areas of the country that gained control of Florida after the conflict Charles Edmund Nugent participated in, what other differences are there between Paco Godia's birthplace and Real Madrid?",
+   "score": 0.05,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.75,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    10,
+    11,
+    19,
+    17,
+    1
+   ],
+   "bfs_top5": [
+    10,
+    11,
+    19,
+    17,
+    15
+   ],
+   "gold": [
+    1,
+    10,
+    17,
+    19
+   ],
+   "lost_gold": [
+    1
+   ],
+   "intruders": [
+    15
+   ],
+   "reasons": [
+    {
+     "intruder": 15,
+     "via": 10,
+     "edge": "Paco Godia -[connected_to]-> Barcelona",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 15,
+     "via": 10,
+     "edge": "Barcelona",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 15,
+     "via": 10,
+     "edge": "Barcelona",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "lost_gold": 1,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 100
+  },
+  {
+   "qid": "4hop2__5206_39078_8987_8974",
+   "question": "Where is the embassy in the only communist country whose military branch helping the Old West's inadequate local police was unprepared for invasion of the country conquered by the Pact?",
+   "score": 0.04,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    12,
+    6,
+    0,
+    16,
+    3
+   ],
+   "bfs_top5": [
+    12,
+    6,
+    0,
+    3,
+    4
+   ],
+   "gold": [
+    0,
+    5,
+    6,
+    16
+   ],
+   "lost_gold": [
+    16
+   ],
+   "intruders": [
+    4
+   ],
+   "reasons": [
+    {
+     "intruder": 4,
+     "via": 12,
+     "edge": "Pact -[connected_to]-> Warsaw Pact",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 4,
+     "via": 12,
+     "edge": "Pact -[connected_to]-> Warsaw Pact",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 4,
+     "via": 12,
+     "edge": "Warsaw Pact",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 4,
+     "via": 12,
+     "edge": "Warsaw Pact",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 4,
+     "via": 12,
+     "edge": "Pact",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 4,
+     "via": 12,
+     "edge": "Pact",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "lost_gold": 16,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 31
+  },
+  {
+   "qid": "3hop1__652852_2053_5289",
+   "question": "What UK label was purchased by the company that, along with the distributor of The Cube, and ABC, is the other major New York-based broadcaster?",
+   "score": 0.033,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    8,
+    16,
+    6,
+    9,
+    0
+   ],
+   "bfs_top5": [
+    8,
+    16,
+    6,
+    0,
+    11
+   ],
+   "gold": [
+    6,
+    8,
+    9
+   ],
+   "lost_gold": [
+    9
+   ],
+   "intruders": [
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "company -[is one of the three major American broadcast networks]-> ABC",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "company -[is one of the three major American broadcast networks]-> NBC",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "company -[is one of the three major American broadcast networks]-> CBS",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "ABC",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 11,
+     "via": 8,
+     "edge": "ABC",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    }
+   ],
+   "n_connected_pairs": 100
+  },
+  {
+   "qid": "3hop1__465684_160545_62931",
+   "question": "Where in the country where Bodindecha was born was The Beach filmed?",
+   "score": 0.023,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    14,
+    15,
+    8,
+    6,
+    3
+   ],
+   "bfs_top5": [
+    14,
+    15,
+    8,
+    19,
+    5
+   ],
+   "gold": [
+    6,
+    13,
+    14
+   ],
+   "lost_gold": [
+    6
+   ],
+   "intruders": [
+    5,
+    19
+   ],
+   "reasons": [
+    {
+     "intruder": 5,
+     "via": 14,
+     "edge": "The Beach -[connected_to]-> Koh Phi Phi",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 5,
+     "via": 14,
+     "edge": "The Beach",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 5,
+     "via": 14,
+     "edge": "The Beach",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 19,
+     "via": 14,
+     "edge": "The Beach -[connected_to]-> Koh Phi Phi",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 19,
+     "via": 14,
+     "edge": "The Beach",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 19,
+     "via": 14,
+     "edge": "The Beach",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    }
+   ],
+   "n_connected_pairs": 31
+  },
+  {
+   "qid": "4hop1__88342_75218_128008_89859",
+   "question": "When does regular season start in the league where a team has played the most games in the competition where they give out the MLB MVP award after?",
+   "score": 0.0,
+   "R@5_base": 0.5,
+   "R@5_bfs": 0.25,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    1,
+    7,
+    11,
+    2,
+    0
+   ],
+   "bfs_top5": [
+    1,
+    7,
+    11,
+    0,
+    13
+   ],
+   "gold": [
+    1,
+    2,
+    6,
+    12
+   ],
+   "lost_gold": [
+    2
+   ],
+   "intruders": [
+    13
+   ],
+   "reasons": [
+    {
+     "intruder": 13,
+     "via": 7,
+     "edge": "MLB",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 13,
+     "via": 7,
+     "edge": "MLB",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "lost_gold": 2,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 55
+  },
+  {
+   "qid": "4hop3__630723_88460_30152_20999",
+   "question": "How were people from whom new coins were a proclamation of independence by the Somali Muslim Ajuran Empire expelled from the natural boundary between Thailand and Phommathat's country of citizenship?",
+   "score": -0.01,
+   "R@5_base": 0.25,
+   "R@5_bfs": 0.0,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    8,
+    3,
+    9,
+    11,
+    15
+   ],
+   "bfs_top5": [
+    8,
+    3,
+    9,
+    0,
+    4
+   ],
+   "gold": [
+    2,
+    7,
+    13,
+    15
+   ],
+   "lost_gold": [
+    15
+   ],
+   "intruders": [
+    0,
+    4
+   ],
+   "reasons": [
+    {
+     "intruder": 0,
+     "via": 8,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 0,
+     "via": 8,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "people",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "lost_gold": 15,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 36
+  },
+  {
+   "qid": "4hop1__860115_798482_131926_90707",
+   "question": "Where does the body of water by the city that shares a border with Elizabeth Berg's birthplace and Ohio River meet?",
+   "score": -0.02,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    19,
+    4,
+    2,
+    9,
+    15
+   ],
+   "bfs_top5": [
+    19,
+    4,
+    2,
+    7,
+    16
+   ],
+   "gold": [
+    1,
+    4,
+    9,
+    19
+   ],
+   "lost_gold": [
+    9
+   ],
+   "intruders": [
+    7,
+    16
+   ],
+   "reasons": [
+    {
+     "intruder": 7,
+     "via": 19,
+     "edge": "Ohio River -[connected_to]-> Elizabeth Berg",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 16,
+     "via": 4,
+     "edge": "body of water -[connected_to]-> Ohio River",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "lost_gold": 9,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 37
+  },
+  {
+   "qid": "3hop1__90327_73181_68042",
+   "question": "When did the majority party in the body which approves members of the Cabinet gain control of the House?",
+   "score": -0.027,
+   "R@5_base": 0.3333333333333333,
+   "R@5_bfs": 0.0,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    19,
+    17,
+    4,
+    2,
+    3
+   ],
+   "bfs_top5": [
+    19,
+    17,
+    4,
+    11,
+    3
+   ],
+   "gold": [
+    2,
+    6,
+    8
+   ],
+   "lost_gold": [
+    2
+   ],
+   "intruders": [
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 11,
+     "via": 19,
+     "edge": "majority party -[connected_to]-> House",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 11,
+     "via": 19,
+     "edge": "House",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 11,
+     "via": 19,
+     "edge": "House",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "lost_gold": 2,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 66
+  },
+  {
+   "qid": "3hop1__462960_160545_34751",
+   "question": "What year did the country where Pao Sarasin was born form an alliance with Japan?",
+   "score": -0.027,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    0,
+    10,
+    19,
+    4,
+    1
+   ],
+   "bfs_top5": [
+    0,
+    10,
+    19,
+    1,
+    3
+   ],
+   "gold": [
+    0,
+    4,
+    16
+   ],
+   "lost_gold": [
+    4
+   ],
+   "intruders": [
+    3
+   ],
+   "reasons": [
+    {
+     "intruder": 3,
+     "via": 0,
+     "edge": "Thailand -[formed an alliance with]-> Japan",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 3,
+     "via": 0,
+     "edge": "Japan",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 3,
+     "via": 0,
+     "edge": "Japan",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "lost_gold": 4,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 66
+  },
+  {
+   "qid": "3hop1__136852_30587_83479",
+   "question": "What was the main goal of Germany in the battle of the ocean region adjacent to the city where The Golden Palace is set?",
+   "score": -0.037,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    3,
+    1,
+    9,
+    4,
+    7
+   ],
+   "bfs_top5": [
+    3,
+    1,
+    9,
+    11,
+    8
+   ],
+   "gold": [
+    3,
+    4,
+    16
+   ],
+   "lost_gold": [
+    4
+   ],
+   "intruders": [
+    8,
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 8,
+     "via": 3,
+     "edge": "Germany -[involved in]-> Battle of the Atlantic",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 11,
+     "via": 3,
+     "edge": "Germany -[involved in]-> Battle of the Atlantic",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 8
+    }
+   ],
+   "n_connected_pairs": 37
+  },
+  {
+   "qid": "4hop2__567956_14670_8987_8974",
+   "question": "A country's military branch, which in the US contains the Air Defense Artillery, was unprepared for the invasion of the country that experienced a normalization period. The unprepared country was the only communist country to have an embassy where?",
+   "score": -0.04,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    19,
+    9,
+    6,
+    11,
+    8
+   ],
+   "bfs_top5": [
+    19,
+    9,
+    6,
+    1,
+    8
+   ],
+   "gold": [
+    8,
+    11,
+    17,
+    19
+   ],
+   "lost_gold": [
+    11
+   ],
+   "intruders": [
+    1
+   ],
+   "reasons": [
+    {
+     "intruder": 1,
+     "via": 19,
+     "edge": "Yugoslavia -[had_embassy_in]-> Embassy",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 1,
+     "via": 19,
+     "edge": "Embassy",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 1,
+     "via": 19,
+     "edge": "Embassy",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 1,
+     "via": 19,
+     "edge": "US",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 1,
+     "via": 19,
+     "edge": "US",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 9
+    }
+   ],
+   "n_connected_pairs": 59
+  },
+  {
+   "qid": "3hop2__14777_8533_9331",
+   "question": "What dissolved privileges in Poland held by the empire that used Pan-Slavism as a tool, the leader of the North German Confederation during the Franco-Prussian War, and the Habsburg Monarchy?",
+   "score": -0.057,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    19,
+    2,
+    17,
+    0,
+    15
+   ],
+   "bfs_top5": [
+    19,
+    2,
+    17,
+    18,
+    16
+   ],
+   "gold": [
+    2,
+    13,
+    15
+   ],
+   "lost_gold": [
+    15
+   ],
+   "intruders": [
+    16,
+    18
+   ],
+   "reasons": [
+    {
+     "intruder": 16,
+     "via": 19,
+     "edge": "Pan-Slavism -[connected_to]-> ethnic groups",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "Pan-Slavism -[connected_to]-> ethnic groups",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "ethnic groups",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 2
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "ethnic groups",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 2
+    }
+   ],
+   "n_connected_pairs": 39
+  },
+  {
+   "qid": "3hop2__87184_36497_76291",
+   "question": "When did the party that controls the House of Representatives right now, take control of the political body that the President calls on to support his USAF appointments?",
+   "score": -0.097,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    15,
+    8,
+    4,
+    3,
+    17
+   ],
+   "bfs_top5": [
+    15,
+    8,
+    4,
+    17,
+    2
+   ],
+   "gold": [
+    0,
+    3,
+    8
+   ],
+   "lost_gold": [
+    3
+   ],
+   "intruders": [
+    2
+   ],
+   "reasons": [
+    {
+     "intruder": 2,
+     "via": 15,
+     "edge": "House of Representatives",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 2,
+     "via": 15,
+     "edge": "House of Representatives",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    }
+   ],
+   "n_connected_pairs": 43
+  },
+  {
+   "qid": "3hop1__145427_106426_157788",
+   "question": "What is one railway line in the country the produced The Longest Night in the city where You Wenhui was born?",
+   "score": -0.147,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    1,
+    5,
+    11,
+    18,
+    14
+   ],
+   "bfs_top5": [
+    1,
+    5,
+    11,
+    18,
+    17
+   ],
+   "gold": [
+    1,
+    11,
+    14
+   ],
+   "lost_gold": [
+    14
+   ],
+   "intruders": [
+    17
+   ],
+   "reasons": [
+    {
+     "intruder": 17,
+     "via": 1,
+     "edge": "City -[connected_to]-> Shanghai",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "lost_gold": 14,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 128
+  },
+  {
+   "qid": "3hop1__346416_831637_91775",
+   "question": "What does seal stand for in the U.S. military branch that operates a list of destroyer classes, and also operates NC?",
+   "score": -0.217,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    5,
+    10,
+    0,
+    15,
+    3
+   ],
+   "bfs_top5": [
+    5,
+    10,
+    0,
+    13,
+    4
+   ],
+   "gold": [
+    3,
+    5,
+    10
+   ],
+   "lost_gold": [
+    3
+   ],
+   "intruders": [
+    4,
+    13
+   ],
+   "reasons": [
+    {
+     "intruder": 4,
+     "via": 5,
+     "edge": "Navy SEALs -[connected_to]-> SEAL",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 4,
+     "via": 5,
+     "edge": "SEAL -[connected_to]-> Sea, Air, and Land",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 4,
+     "via": 5,
+     "edge": "U.S. Navy -[connected_to]-> NC",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 4,
+     "via": 5,
+     "edge": "NC",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 4,
+     "via": 5,
+     "edge": "NC",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 4,
+     "via": 5,
+     "edge": "SEAL",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 4,
+     "via": 5,
+     "edge": "SEAL",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 13,
+     "via": 5,
+     "edge": "Navy SEALs -[connected_to]-> SEAL",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 13,
+     "via": 5,
+     "edge": "SEAL -[connected_to]-> Sea, Air, and Land",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 13,
+     "via": 5,
+     "edge": "U.S. Navy -[connected_to]-> NC",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 13,
+     "via": 5,
+     "edge": "NC",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 13,
+     "via": 5,
+     "edge": "NC",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 13,
+     "via": 5,
+     "edge": "SEAL",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 13,
+     "via": 5,
+     "edge": "SEAL",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 16
+    }
+   ],
+   "n_connected_pairs": 155
+  },
+  {
+   "qid": "2hop__46550_85990",
+   "question": "Who were the leaders of the opposition of the party that controlled the house of representatives in 2002?",
+   "score": -0.26,
+   "R@5_base": 0.5,
+   "R@5_bfs": 0.0,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    13,
+    19,
+    14,
+    17,
+    16
+   ],
+   "bfs_top5": [
+    13,
+    19,
+    14,
+    7,
+    6
+   ],
+   "gold": [
+    4,
+    17
+   ],
+   "lost_gold": [
+    17
+   ],
+   "intruders": [
+    6,
+    7
+   ],
+   "reasons": [
+    {
+     "intruder": 6,
+     "via": 13,
+     "edge": "Democratic Party -[role assignment when they are the]-> Minority Leader",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 3
+    },
+    {
+     "intruder": 6,
+     "via": 13,
+     "edge": "Speaker",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 6,
+     "via": 13,
+     "edge": "Speaker",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 7,
+     "via": 13,
+     "edge": "Majority Leader",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 7,
+     "via": 13,
+     "edge": "Majority Leader",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 7,
+     "via": 13,
+     "edge": "Speaker",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 7,
+     "via": 13,
+     "edge": "Speaker",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    }
+   ],
+   "n_connected_pairs": 76
+  },
+  {
+   "qid": "3hop1__157807_19788_15107",
+   "question": "What percentage of Eritrea is estimated to adhere to the religion widely practiced in the region that the tentacled snake is native to?",
+   "score": -0.287,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    17,
+    2,
+    18,
+    15,
+    13
+   ],
+   "bfs_top5": [
+    17,
+    2,
+    18,
+    4,
+    5
+   ],
+   "gold": [
+    12,
+    15,
+    17
+   ],
+   "lost_gold": [
+    15
+   ],
+   "intruders": [
+    4,
+    5
+   ],
+   "reasons": [
+    {
+     "intruder": 4,
+     "via": 17,
+     "edge": "question -[connected_to]-> religion",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 4,
+     "via": 17,
+     "edge": "Eritrea -[connected_to]-> religion",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 4,
+     "via": 17,
+     "edge": "Eritrea -[connected_to]-> estimate",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 4,
+     "via": 17,
+     "edge": "religion",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 4,
+     "via": 17,
+     "edge": "religion",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 4,
+     "via": 17,
+     "edge": "estimate",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 4,
+     "via": 17,
+     "edge": "estimate",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 5,
+     "via": 17,
+     "edge": "Eritrea -[connected_to]-> religion",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 5,
+     "via": 17,
+     "edge": "Eritrea -[connected_to]-> estimate",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 5,
+     "via": 17,
+     "edge": "religion",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 5,
+     "via": 17,
+     "edge": "religion",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 12
+    },
+    {
+     "intruder": 5,
+     "via": 17,
+     "edge": "estimate",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 7
+    },
+    {
+     "intruder": 5,
+     "via": 17,
+     "edge": "estimate",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 7
+    }
+   ],
+   "n_connected_pairs": 112
+  },
+  {
+   "qid": "3hop1__106042_64399_52278",
+   "question": "Who controlled the holy land where the brand of Christianity practiced in the country where Vasilopita is lasted up until the 7th century?",
+   "score": -0.287,
+   "R@5_base": 0.3333333333333333,
+   "R@5_bfs": 0.0,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    18,
+    4,
+    13,
+    5,
+    3
+   ],
+   "bfs_top5": [
+    18,
+    4,
+    13,
+    5,
+    14
+   ],
+   "gold": [
+    3,
+    8,
+    16
+   ],
+   "lost_gold": [
+    3
+   ],
+   "intruders": [
+    14
+   ],
+   "reasons": [
+    {
+     "intruder": 14,
+     "via": 18,
+     "edge": "7th century",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 14,
+     "via": 18,
+     "edge": "7th century",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    }
+   ],
+   "n_connected_pairs": 62
+  },
+  {
+   "qid": "3hop2__27069_92991_76291",
+   "question": "When did the party of Oklahoma's US Senators take control of the body determining the rules of the US House and US Senate?",
+   "score": -0.327,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.6666666666666666,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    18,
+    1,
+    17,
+    0,
+    13
+   ],
+   "bfs_top5": [
+    18,
+    1,
+    17,
+    13,
+    10
+   ],
+   "gold": [
+    0,
+    13,
+    18
+   ],
+   "lost_gold": [
+    0
+   ],
+   "intruders": [
+    10
+   ],
+   "reasons": [
+    {
+     "intruder": 10,
+     "via": 18,
+     "edge": "Republicans -[connected_to]-> Oklahoma",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 10,
+     "via": 18,
+     "edge": "Republicans -[connected_to]-> Senate",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 10,
+     "via": 18,
+     "edge": "Republicans -[connected_to]-> Senate",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 10,
+     "via": 18,
+     "edge": "Republicans",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 10,
+     "via": 18,
+     "edge": "Republicans",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 5
+    }
+   ],
+   "n_connected_pairs": 136
+  },
+  {
+   "qid": "2hop__57638_88526",
+   "question": "Who was picked in the NBA draft before the player with the highest point average in NBA history?",
+   "score": -0.33,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    17,
+    4,
+    1,
+    11,
+    6
+   ],
+   "bfs_top5": [
+    17,
+    4,
+    1,
+    11,
+    8
+   ],
+   "gold": [
+    6,
+    11
+   ],
+   "lost_gold": [
+    6
+   ],
+   "intruders": [
+    8
+   ],
+   "reasons": [
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> basketball player",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> Toronto Raptors",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player -[connected_to]-> NBA draft",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "player",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "NBA draft",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    },
+    {
+     "intruder": 8,
+     "via": 17,
+     "edge": "NBA draft",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 14
+    }
+   ],
+   "n_connected_pairs": 153
+  },
+  {
+   "qid": "4hop1__88342_75218_128008_46748",
+   "question": "The MLB MVP award is given out after a competition where a team has played the most games. What is the longest win streak in the history of league that team plays for?",
+   "score": -0.38,
+   "R@5_base": 0.5,
+   "R@5_bfs": 0.25,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    14,
+    11,
+    16,
+    6,
+    17
+   ],
+   "bfs_top5": [
+    14,
+    11,
+    16,
+    12,
+    13
+   ],
+   "gold": [
+    1,
+    2,
+    6,
+    14
+   ],
+   "lost_gold": [
+    6
+   ],
+   "intruders": [
+    12,
+    13
+   ],
+   "reasons": [
+    {
+     "intruder": 12,
+     "via": 14,
+     "edge": "New York Yankees -[connected_to]-> MLB",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 12,
+     "via": 14,
+     "edge": "MLB",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 12,
+     "via": 14,
+     "edge": "MLB",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 13,
+     "via": 14,
+     "edge": "New York Yankees -[connected_to]-> MLB",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 13,
+     "via": 14,
+     "edge": "MLB",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 13,
+     "via": 14,
+     "edge": "MLB",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "lost_gold": 6,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 73
+  },
+  {
+   "qid": "3hop1__635099_131926_13165",
+   "question": "What treaty ceded territory to the US extending west to the body of water by the city where Write This Down was formed?",
+   "score": -0.517,
+   "R@5_base": 0.3333333333333333,
+   "R@5_bfs": 0.0,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    8,
+    12,
+    11,
+    17,
+    0
+   ],
+   "bfs_top5": [
+    8,
+    12,
+    11,
+    4,
+    17
+   ],
+   "gold": [
+    0,
+    3,
+    14
+   ],
+   "lost_gold": [
+    0
+   ],
+   "intruders": [
+    4
+   ],
+   "reasons": [
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "Treaty of Paris (1783) -[connected_to]-> United States",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "Treaty",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "Treaty",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "United States",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 4,
+     "via": 8,
+     "edge": "United States",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    }
+   ],
+   "n_connected_pairs": 105
+  },
+  {
+   "qid": "4hop1__72247_497223_15840_36002",
+   "question": "What are the Genesis's advantages over the game platform with a 3 letter name abbreviation, featuring a game named after the league that chooses where the Super Bowl is held?",
+   "score": -0.56,
+   "R@5_base": 0.25,
+   "R@5_bfs": 0.0,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    9,
+    1,
+    10,
+    0,
+    12
+   ],
+   "bfs_top5": [
+    9,
+    1,
+    10,
+    7,
+    12
+   ],
+   "gold": [
+    0,
+    2,
+    16,
+    18
+   ],
+   "lost_gold": [
+    0
+   ],
+   "intruders": [
+    7
+   ],
+   "reasons": [
+    {
+     "intruder": 7,
+     "via": 9,
+     "edge": "NES -[connected_to]-> NIN",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 7,
+     "via": 9,
+     "edge": "Super Bowl",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 15
+    },
+    {
+     "intruder": 7,
+     "via": 9,
+     "edge": "Super Bowl",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 15
+    },
+    {
+     "intruder": 7,
+     "via": 9,
+     "edge": "NIN",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 7,
+     "via": 9,
+     "edge": "NIN",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 8
+    }
+   ],
+   "n_connected_pairs": 131
+  },
+  {
+   "qid": "3hop1__68981_91191_16530",
+   "question": "Who was appointed arbitrator by the first convert to the faith that is the most common religion in Southeast Asia?",
+   "score": -0.567,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    2,
+    12,
+    4,
+    6,
+    15
+   ],
+   "bfs_top5": [
+    2,
+    12,
+    4,
+    6,
+    18
+   ],
+   "gold": [
+    6,
+    10,
+    15
+   ],
+   "lost_gold": [
+    15
+   ],
+   "intruders": [
+    18
+   ],
+   "reasons": [
+    {
+     "intruder": 18,
+     "via": 2,
+     "edge": "Islam -[connected_to]-> Southeast Asia",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 18,
+     "via": 2,
+     "edge": "Southeast Asia",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 18,
+     "via": 2,
+     "edge": "Southeast Asia",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 10
+    },
+    {
+     "lost_gold": 15,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 120
+  },
+  {
+   "qid": "3hop1__92991_78276_68042",
+   "question": "When did the majority party in the body which determines the rules of the US House and US Senate gain control of the House?",
+   "score": -0.667,
+   "R@5_base": 0.3333333333333333,
+   "R@5_bfs": 0.0,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    6,
+    4,
+    14,
+    9,
+    11
+   ],
+   "bfs_top5": [
+    6,
+    4,
+    14,
+    15,
+    2
+   ],
+   "gold": [
+    1,
+    5,
+    9
+   ],
+   "lost_gold": [
+    9
+   ],
+   "intruders": [
+    2,
+    15
+   ],
+   "reasons": [
+    {
+     "intruder": 2,
+     "via": 6,
+     "edge": "majority party -[connected_to]-> House",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 2,
+     "via": 6,
+     "edge": "House",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 2,
+     "via": 6,
+     "edge": "House",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 15,
+     "via": 6,
+     "edge": "majority party -[connected_to]-> House",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 15,
+     "via": 6,
+     "edge": "House",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 15,
+     "via": 6,
+     "edge": "House",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    }
+   ],
+   "n_connected_pairs": 120
+  },
+  {
+   "qid": "2hop__442175_56873",
+   "question": "When did the team that Jamie Ward is a member of win the FA Cup?",
+   "score": -0.7,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    7,
+    1,
+    0,
+    12,
+    19
+   ],
+   "bfs_top5": [
+    7,
+    1,
+    0,
+    14,
+    3
+   ],
+   "gold": [
+    7,
+    12
+   ],
+   "lost_gold": [
+    12
+   ],
+   "intruders": [
+    3,
+    14
+   ],
+   "reasons": [
+    {
+     "intruder": 3,
+     "via": 7,
+     "edge": "Jamie Ward -[connected_to]-> team",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 3,
+     "via": 7,
+     "edge": "team -[connected_to]-> FA Cup",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 17
+    },
+    {
+     "intruder": 3,
+     "via": 7,
+     "edge": "team",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 3,
+     "via": 7,
+     "edge": "team",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 14,
+     "via": 7,
+     "edge": "Jamie Ward -[connected_to]-> team",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 14,
+     "via": 7,
+     "edge": "team -[connected_to]-> FA Cup",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 17
+    },
+    {
+     "intruder": 14,
+     "via": 7,
+     "edge": "team",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    },
+    {
+     "intruder": 14,
+     "via": 7,
+     "edge": "team",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 11
+    }
+   ],
+   "n_connected_pairs": 190
+  },
+  {
+   "qid": "3hop1__30240_740597_41132",
+   "question": "How many times did plague occur in the birthplace of the person who used the spice route that the Ottoman Empire controlled?",
+   "score": -0.747,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    4,
+    0,
+    14,
+    15,
+    17
+   ],
+   "bfs_top5": [
+    4,
+    0,
+    14,
+    11,
+    7
+   ],
+   "gold": [
+    4,
+    13,
+    17
+   ],
+   "lost_gold": [
+    17
+   ],
+   "intruders": [
+    7,
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 7,
+     "via": 4,
+     "edge": "Ottoman Empire -[connected_to]-> Spice Route",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 7,
+     "via": 4,
+     "edge": "Ottoman Empire",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 7,
+     "via": 4,
+     "edge": "Ottoman Empire",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 11,
+     "via": 4,
+     "edge": "Ottoman Empire -[connected_to]-> Spice Route",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 11,
+     "via": 4,
+     "edge": "Ottoman Empire",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "intruder": 11,
+     "via": 4,
+     "edge": "Ottoman Empire",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 16
+    },
+    {
+     "lost_gold": 17,
+     "kind": "ungrounded",
+     "note": "gold passage has no edge (its entities were not extracted or not matched)"
+    }
+   ],
+   "n_connected_pairs": 138
+  },
+  {
+   "qid": "2hop__96411_47902",
+   "question": "Who plays the main character of The Bourne Deception?",
+   "score": -0.9,
+   "R@5_base": 1.0,
+   "R@5_bfs": 0.5,
+   "FR@5_base": 1.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    9,
+    17,
+    2,
+    12,
+    11
+   ],
+   "bfs_top5": [
+    9,
+    17,
+    2,
+    11,
+    8
+   ],
+   "gold": [
+    9,
+    12
+   ],
+   "lost_gold": [
+    12
+   ],
+   "intruders": [
+    8
+   ],
+   "reasons": [
+    {
+     "intruder": 8,
+     "via": 9,
+     "edge": "The Bourne Deception -[connected_to]-> Novel",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 8,
+     "via": 9,
+     "edge": "Jason Bourne",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 8,
+     "via": 9,
+     "edge": "Jason Bourne",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 8
+    },
+    {
+     "intruder": 8,
+     "via": 9,
+     "edge": "Novel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 8,
+     "via": 9,
+     "edge": "Novel",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    }
+   ],
+   "n_connected_pairs": 190
+  },
+  {
+   "qid": "4hop1__88342_75218_128008_46894",
+   "question": "Who had the lowest batting average in the league where the team with the most games in the series after which the MLB MVP is awarded played?",
+   "score": -1.0,
+   "R@5_base": 0.75,
+   "R@5_bfs": 0.25,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    9,
+    18,
+    16,
+    11,
+    1
+   ],
+   "bfs_top5": [
+    9,
+    18,
+    16,
+    0,
+    8
+   ],
+   "gold": [
+    1,
+    9,
+    11,
+    17
+   ],
+   "lost_gold": [
+    1,
+    11
+   ],
+   "intruders": [
+    0,
+    8
+   ],
+   "reasons": [
+    {
+     "intruder": 0,
+     "via": 9,
+     "edge": "Player -[connected_to]-> Derek Jeter",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 0,
+     "via": 9,
+     "edge": "Player -[connected_to]-> Roberto Clemente",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 0,
+     "via": 9,
+     "edge": "Player",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 0,
+     "via": 9,
+     "edge": "Player",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 8,
+     "via": 9,
+     "edge": "Player -[connected_to]-> Buster Posey",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 8,
+     "via": 9,
+     "edge": "Player",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    },
+    {
+     "intruder": 8,
+     "via": 9,
+     "edge": "Player",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 9
+    }
+   ],
+   "n_connected_pairs": 150
+  },
+  {
+   "qid": "3hop2__304722_397371_63959",
+   "question": "When was the last time Duane Courtney's team beat the winner of the 1894-95 FA Cup?",
+   "score": -1.087,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    19,
+    11,
+    18,
+    0,
+    13
+   ],
+   "bfs_top5": [
+    19,
+    11,
+    18,
+    0,
+    16
+   ],
+   "gold": [
+    13,
+    15,
+    19
+   ],
+   "lost_gold": [
+    13
+   ],
+   "intruders": [
+    16
+   ],
+   "reasons": [
+    {
+     "intruder": 16,
+     "via": 19,
+     "edge": "Duane Courtney -[connected_to]-> Everton",
+     "relation_type": "kg_bridge",
+     "kind": "off_query_relation",
+     "entity_in_n_passages": 4
+    }
+   ],
+   "n_connected_pairs": 142
+  },
+  {
+   "qid": "2hop__47712_25719",
+   "question": "At the end of which year did tribes from the place where the Celts are said to have migrated from invade the Roman empire?",
+   "score": -1.1,
+   "R@5_base": 0.5,
+   "R@5_bfs": 0.0,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    19,
+    4,
+    0,
+    13,
+    10
+   ],
+   "bfs_top5": [
+    19,
+    4,
+    0,
+    5,
+    18
+   ],
+   "gold": [
+    7,
+    13
+   ],
+   "lost_gold": [
+    13
+   ],
+   "intruders": [
+    5,
+    18
+   ],
+   "reasons": [
+    {
+     "intruder": 5,
+     "via": 19,
+     "edge": "invade -[at the end of]-> Y",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 5,
+     "via": 19,
+     "edge": "invade -[at the end of]-> Y",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 5,
+     "via": 19,
+     "edge": "CE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 5,
+     "via": 19,
+     "edge": "CE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 5,
+     "via": 19,
+     "edge": "RE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 5,
+     "via": 19,
+     "edge": "RE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 5,
+     "via": 19,
+     "edge": "Y",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 5,
+     "via": 19,
+     "edge": "Y",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 5,
+     "via": 19,
+     "edge": "invade",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 5,
+     "via": 19,
+     "edge": "invade",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "invade -[at the end of]-> Y",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "invade -[at the end of]-> Y",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "CE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "CE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "RE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "RE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "Y",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "Y",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "invade",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 10
+    },
+    {
+     "intruder": 18,
+     "via": 19,
+     "edge": "invade",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 10
+    }
+   ],
+   "n_connected_pairs": 190
+  },
+  {
+   "qid": "3hop1__507961_160713_77246",
+   "question": "What is the meaning of the word that is also a majority religion in India when the country where Banna is located was created in the Arabic dictionary?",
+   "score": -1.237,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    5,
+    1,
+    6,
+    7,
+    8
+   ],
+   "bfs_top5": [
+    5,
+    1,
+    6,
+    11,
+    9
+   ],
+   "gold": [
+    4,
+    6,
+    8
+   ],
+   "lost_gold": [
+    8
+   ],
+   "intruders": [
+    9,
+    11
+   ],
+   "reasons": [
+    {
+     "intruder": 9,
+     "via": 5,
+     "edge": "India -[connected_to]-> Country",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 9,
+     "via": 5,
+     "edge": "India -[connected_to]-> Country",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 9,
+     "via": 5,
+     "edge": "India",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 9,
+     "via": 5,
+     "edge": "India",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 9,
+     "via": 5,
+     "edge": "Country",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 9,
+     "via": 5,
+     "edge": "Country",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 11,
+     "via": 5,
+     "edge": "India -[connected_to]-> Country",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 11,
+     "via": 5,
+     "edge": "India -[connected_to]-> Country",
+     "relation_type": "kg_bridge",
+     "kind": "generic",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 11,
+     "via": 5,
+     "edge": "India",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 11,
+     "via": 5,
+     "edge": "India",
+     "relation_type": "entity_overlap",
+     "kind": "generic",
+     "entity_in_n_passages": 19
+    },
+    {
+     "intruder": 11,
+     "via": 5,
+     "edge": "Country",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 11,
+     "via": 5,
+     "edge": "Country",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 11,
+     "via": 5,
+     "edge": "Islam",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    },
+    {
+     "intruder": 11,
+     "via": 5,
+     "edge": "Islam",
+     "relation_type": "entity_overlap",
+     "kind": "off_query_entity",
+     "entity_in_n_passages": 6
+    }
+   ],
+   "n_connected_pairs": 177
+  },
+  {
+   "qid": "3hop2__90098_60649_10557",
+   "question": "What was the language from which the last name Sylvester originates during the era of the Frankish king who formed the Holy Roman Empire later known as?",
+   "score": -1.267,
+   "R@5_base": 0.6666666666666666,
+   "R@5_bfs": 0.3333333333333333,
+   "FR@5_base": 0.0,
+   "FR@5_bfs": 0.0,
+   "base_top5": [
+    0,
+    15,
+    13,
+    3,
+    1
+   ],
+   "bfs_top5": [
+    0,
+    15,
+    13,
+    7,
+    12
+   ],
+   "gold": [
+    3,
+    14,
+    15
+   ],
+   "lost_gold": [
+    3
+   ],
+   "intruders": [
+    7,
+    12
+   ],
+   "reasons": [
+    {
+     "intruder": 7,
+     "via": 0,
+     "edge": "S -[derived from]-> L",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 7,
+     "via": 0,
+     "edge": "S -[derived from]-> L",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 7,
+     "via": 0,
+     "edge": "S -[originally used Latin]-> L",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 7,
+     "via": 0,
+     "edge": "S -[originally used Latin]-> L",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 7,
+     "via": 0,
+     "edge": "S",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 7,
+     "via": 0,
+     "edge": "S",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 7,
+     "via": 0,
+     "edge": "L",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 7,
+     "via": 0,
+     "edge": "L",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 7,
+     "via": 0,
+     "edge": "HRE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 7,
+     "via": 0,
+     "edge": "HRE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 12,
+     "via": 0,
+     "edge": "S -[derived from]-> L",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 12,
+     "via": 0,
+     "edge": "S -[derived from]-> L",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 12,
+     "via": 0,
+     "edge": "S -[originally used Latin]-> L",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 12,
+     "via": 0,
+     "edge": "S -[originally used Latin]-> L",
+     "relation_type": "kg_bridge",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 12,
+     "via": 0,
+     "edge": "S",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 12,
+     "via": 0,
+     "edge": "S",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 12,
+     "via": 0,
+     "edge": "L",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 12,
+     "via": 0,
+     "edge": "L",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 20
+    },
+    {
+     "intruder": 12,
+     "via": 0,
+     "edge": "HRE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    },
+    {
+     "intruder": 12,
+     "via": 0,
+     "edge": "HRE",
+     "relation_type": "entity_overlap",
+     "kind": "substring",
+     "entity_in_n_passages": 5
+    }
+   ],
+   "n_connected_pairs": 190
+  }
+ ]
+}

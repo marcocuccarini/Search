@@ -1,0 +1,26 @@
+dataset,retriever,variant,mode,type,config,Recall@3,Recall@5,FullRec@3,FullRec@5,NDCG@10,MRR,val_Recall@5,seeds,Recall@3_std,Recall@5_std,FullRec@3_std,FullRec@5_std,NDCG@10_std,MRR_std
+2wiki,E5-base,none,none,-,,0.7775,0.8712,0.534,0.6945,0.9221,0.9771,,,,,,,,
+2wiki,E5-base,aware,bfs,entity,"{""top_k_bm25"": 2, ""max_depth"": 2, ""branch"": 3, ""alpha"": 0.3}",0.8514,0.9447,0.6345,0.864,0.9408,0.9771,0.9489,1,,,,,,
+2wiki,E5-base,aware,bfs,triple,"{""top_k_bm25"": 2, ""max_depth"": 2, ""branch"": 3, ""alpha"": 0.7}",0.8561,0.9461,0.6445,0.868,0.9417,0.9769,0.951,1,,,,,,
+2wiki,E5-base,aware,bfs,both,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.5}",0.8615,0.948,0.6535,0.8715,0.9424,0.977,0.9537,1,,,,,,
+2wiki,E5-base,aware,ge,entity,"{""ge_alpha"": 0.5, ""ge_hops"": 2}",0.8087,0.9245,0.612,0.8285,0.9015,0.891,0.934,1,,,,,,
+2wiki,E5-base,aware,ge,triple,"{""ge_alpha"": 0.3, ""ge_hops"": 2}",0.8005,0.9091,0.586,0.7875,0.9102,0.9235,0.9199,1,,,,,,
+2wiki,E5-base,aware,ge,both,"{""ge_alpha"": 0.5, ""ge_hops"": 2}",0.8074,0.9253,0.613,0.8315,0.8992,0.8844,0.9325,1,,,,,,
+2wiki,E5-base,unaware,bfs,entity,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.5}",0.8245,0.917,0.6045,0.7945,0.9337,0.9769,0.912,1,,,,,,
+2wiki,E5-base,unaware,bfs,triple,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.3}",0.8207,0.9134,0.596,0.789,0.9326,0.9769,0.908,1,,,,,,
+2wiki,E5-base,unaware,bfs,both,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.5}",0.8295,0.9209,0.6115,0.8045,0.9347,0.9768,0.9156,1,,,,,,
+2wiki,E5-base,unaware,ge,entity,"{""ge_alpha"": 0.5, ""ge_hops"": 2}",0.7889,0.9042,0.5705,0.7745,0.9062,0.9238,0.9006,1,,,,,,
+2wiki,E5-base,unaware,ge,triple,"{""ge_alpha"": 0.3, ""ge_hops"": 3}",0.7964,0.8996,0.574,0.763,0.9188,0.9495,0.8991,1,,,,,,
+2wiki,E5-base,unaware,ge,both,"{""ge_alpha"": 0.5, ""ge_hops"": 2}",0.7893,0.9067,0.5715,0.7835,0.9057,0.9212,0.9032,1,,,,,,
+2wiki,E5-base,unaware_norm,bfs,entity,"{""top_k_bm25"": 2, ""max_depth"": 2, ""branch"": 3, ""alpha"": 0.5}",0.8366,0.9271,0.6215,0.82,0.9364,0.9769,0.9299,1,,,,,,
+2wiki,E5-base,unaware_norm,bfs,triple,"{""top_k_bm25"": 2, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.3}",0.8391,0.9267,0.626,0.819,0.9363,0.9769,0.9319,1,,,,,,
+2wiki,E5-base,unaware_norm,bfs,both,"{""top_k_bm25"": 2, ""max_depth"": 2, ""branch"": 3, ""alpha"": 0.5}",0.8434,0.931,0.632,0.829,0.9376,0.9768,0.9364,1,,,,,,
+2wiki,E5-base,unaware_norm,ge,entity,"{""ge_alpha"": 0.5, ""ge_hops"": 2}",0.7986,0.913,0.5885,0.794,0.9053,0.9151,0.9131,1,,,,,,
+2wiki,E5-base,unaware_norm,ge,triple,"{""ge_alpha"": 0.3, ""ge_hops"": 3}",0.8059,0.9095,0.5925,0.7885,0.9173,0.9401,0.9127,1,,,,,,
+2wiki,E5-base,unaware_norm,ge,both,"{""ge_alpha"": 0.5, ""ge_hops"": 2}",0.8006,0.9151,0.592,0.8045,0.9045,0.9105,0.9151,1,,,,,,
+2wiki,E5-base,random,bfs,entity,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.7549,0.8659,0.5015,0.6821,0.9113,0.9757,0.8644,5,0.0019,0.0011,0.0032,0.0028,0.0002,0.0003
+2wiki,E5-base,random,bfs,triple,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.7488,0.8648,0.4919,0.6801,0.9089,0.9757,0.865,5,0.0032,0.001,0.0027,0.0013,0.0006,0.0004
+2wiki,E5-base,random,bfs,both,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.7518,0.8649,0.4981,0.6816,0.9097,0.9755,0.8644,5,0.0021,0.001,0.0034,0.0006,0.0005,0.0005
+2wiki,E5-base,random,ge,entity,"{""ge_alpha"": 0.0, ""ge_hops"": 1}",0.7775,0.8713,0.534,0.6945,0.9221,0.9771,0.8702,5,0.0,0.0,0.0,0.0,0.0,0.0
+2wiki,E5-base,random,ge,triple,"{""ge_alpha"": 0.0, ""ge_hops"": 1}",0.7775,0.8713,0.534,0.6945,0.9221,0.9771,0.8702,5,0.0,0.0,0.0,0.0,0.0,0.0
+2wiki,E5-base,random,ge,both,"{""ge_alpha"": 0.0, ""ge_hops"": 1}",0.7775,0.8713,0.534,0.6945,0.9221,0.9771,0.8702,5,0.0,0.0,0.0,0.0,0.0,0.0

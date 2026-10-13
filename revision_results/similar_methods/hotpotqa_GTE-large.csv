@@ -1,0 +1,7 @@
+dataset,retriever,method,type,config,val_Recall@5,Recall@3,Recall@5,FullRec@3,FullRec@5,NDCG@10,MRR
+hotpotqa,GTE-large,ppr,entity,"{""damping"": 0.3}",0.9207,0.8458,0.9185,0.711,0.845,0.9126,0.9395
+hotpotqa,GTE-large,ppr,triple,"{""damping"": 0.5}",0.9433,0.882,0.942,0.7765,0.8895,0.9248,0.9427
+hotpotqa,GTE-large,ppr,both,"{""damping"": 0.3}",0.926,0.8542,0.9227,0.724,0.852,0.9179,0.9457
+hotpotqa,GTE-large,gcs,entity,"{""a"": 0.9}",0.934,0.853,0.9293,0.7325,0.868,0.9119,0.9321
+hotpotqa,GTE-large,gcs,triple,"{""a"": 0.9}",0.9237,0.8365,0.9137,0.698,0.837,0.9073,0.9322
+hotpotqa,GTE-large,gcs,both,"{""a"": 0.9}",0.9333,0.8515,0.9297,0.729,0.869,0.9118,0.9321

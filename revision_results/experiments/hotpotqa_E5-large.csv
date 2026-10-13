@@ -1,0 +1,26 @@
+dataset,retriever,variant,mode,type,config,Recall@3,Recall@5,FullRec@3,FullRec@5,NDCG@10,MRR,val_Recall@5,seeds,Recall@3_std,Recall@5_std,FullRec@3_std,FullRec@5_std,NDCG@10_std,MRR_std
+hotpotqa,E5-large,none,none,-,,0.8582,0.931,0.7305,0.866,0.9218,0.9507,,,,,,,,
+hotpotqa,E5-large,aware,bfs,entity,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.3}",0.8405,0.9467,0.697,0.898,0.9163,0.9502,0.9465,1,,,,,,
+hotpotqa,E5-large,aware,bfs,triple,"{""top_k_bm25"": 3, ""max_depth"": 2, ""branch"": 3, ""alpha"": 0.3}",0.8582,0.9527,0.7305,0.9075,0.9254,0.951,0.9575,1,,,,,,
+hotpotqa,E5-large,aware,bfs,both,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.7}",0.845,0.9507,0.7005,0.9035,0.9182,0.9522,0.9515,1,,,,,,
+hotpotqa,E5-large,aware,ge,entity,"{""ge_alpha"": 0.3, ""ge_hops"": 2}",0.878,0.947,0.775,0.8985,0.9227,0.9374,0.947,1,,,,,,
+hotpotqa,E5-large,aware,ge,triple,"{""ge_alpha"": 0.1, ""ge_hops"": 3}",0.8628,0.938,0.743,0.8805,0.9198,0.9414,0.938,1,,,,,,
+hotpotqa,E5-large,aware,ge,both,"{""ge_alpha"": 0.3, ""ge_hops"": 2}",0.879,0.9473,0.7765,0.9,0.9218,0.9355,0.945,1,,,,,,
+hotpotqa,E5-large,unaware,bfs,entity,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.83,0.9365,0.6775,0.878,0.9139,0.9497,0.9393,1,,,,,,
+hotpotqa,E5-large,unaware,bfs,triple,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.837,0.936,0.6905,0.8765,0.9151,0.9501,0.9405,1,,,,,,
+hotpotqa,E5-large,unaware,bfs,both,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.83,0.936,0.6775,0.877,0.9137,0.9497,0.9395,1,,,,,,
+hotpotqa,E5-large,unaware,ge,entity,"{""ge_alpha"": 0.2, ""ge_hops"": 3}",0.8672,0.937,0.753,0.88,0.9225,0.9461,0.9453,1,,,,,,
+hotpotqa,E5-large,unaware,ge,triple,"{""ge_alpha"": 0.3, ""ge_hops"": 2}",0.866,0.9375,0.7475,0.88,0.9214,0.9458,0.9433,1,,,,,,
+hotpotqa,E5-large,unaware,ge,both,"{""ge_alpha"": 0.2, ""ge_hops"": 3}",0.8695,0.9357,0.7565,0.8775,0.9225,0.9462,0.9447,1,,,,,,
+hotpotqa,E5-large,unaware_norm,bfs,entity,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.8317,0.938,0.6795,0.881,0.9147,0.95,0.9423,1,,,,,,
+hotpotqa,E5-large,unaware_norm,bfs,triple,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.831,0.9375,0.678,0.8795,0.9137,0.9498,0.9433,1,,,,,,
+hotpotqa,E5-large,unaware_norm,bfs,both,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.8313,0.9377,0.6785,0.8805,0.9144,0.95,0.9427,1,,,,,,
+hotpotqa,E5-large,unaware_norm,ge,entity,"{""ge_alpha"": 0.2, ""ge_hops"": 3}",0.8718,0.94,0.7615,0.8855,0.9243,0.9454,0.9485,1,,,,,,
+hotpotqa,E5-large,unaware_norm,ge,triple,"{""ge_alpha"": 0.3, ""ge_hops"": 2}",0.8702,0.937,0.757,0.879,0.9217,0.9432,0.9457,1,,,,,,
+hotpotqa,E5-large,unaware_norm,ge,both,"{""ge_alpha"": 0.2, ""ge_hops"": 3}",0.8745,0.9383,0.7655,0.882,0.9243,0.9457,0.949,1,,,,,,
+hotpotqa,E5-large,random,bfs,entity,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.7878,0.9173,0.5962,0.8392,0.8993,0.9479,0.9207,5,0.002,0.002,0.004,0.0037,0.0008,0.0004
+hotpotqa,E5-large,random,bfs,triple,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.7746,0.9169,0.5734,0.8393,0.8952,0.9468,0.9145,5,0.0029,0.0028,0.0052,0.005,0.0008,0.0004
+hotpotqa,E5-large,random,bfs,both,"{""top_k_bm25"": 1, ""max_depth"": 1, ""branch"": 3, ""alpha"": 0.0}",0.7941,0.9187,0.6087,0.8421,0.9011,0.948,0.921,5,0.0013,0.0024,0.0022,0.0047,0.0005,0.0003
+hotpotqa,E5-large,random,ge,entity,"{""ge_alpha"": 0.0, ""ge_hops"": 1}",0.8582,0.931,0.7305,0.866,0.9218,0.9507,0.9323,5,0.0,0.0,0.0,0.0,0.0,0.0
+hotpotqa,E5-large,random,ge,triple,"{""ge_alpha"": 0.0, ""ge_hops"": 1}",0.8582,0.931,0.7305,0.866,0.9218,0.9507,0.9323,5,0.0,0.0,0.0,0.0,0.0,0.0
+hotpotqa,E5-large,random,ge,both,"{""ge_alpha"": 0.0, ""ge_hops"": 1}",0.8582,0.931,0.7305,0.866,0.9218,0.9507,0.9323,5,0.0,0.0,0.0,0.0,0.0,0.0

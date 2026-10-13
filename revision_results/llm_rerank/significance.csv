@@ -1,0 +1,25 @@
+run,A,B,metric,mean_A,mean_B,diff,ci_lo,ci_hi,p_value,significant
+2wiki_BGE-large,Search+ BFS,LLM list-wise,FullRec@5,0.8975,0.9535,-0.056,-0.069,-0.0425,0.0,1
+2wiki_BGE-large,Search+ BFS,LLM list-wise,Recall@5,0.9589,0.9795,-0.0206,-0.0262,-0.015,0.0,1
+2wiki_BGE-large,Search+ NSP,LLM list-wise,FullRec@5,0.8785,0.9535,-0.075,-0.089,-0.0615,0.0,1
+2wiki_BGE-large,Search+ NSP,LLM list-wise,Recall@5,0.9486,0.9795,-0.0309,-0.0371,-0.0249,0.0,1
+hotpotqa_BGE-large,Search+ BFS,LLM list-wise,FullRec@5,0.922,0.9515,-0.0295,-0.0405,-0.019,0.0,1
+hotpotqa_BGE-large,Search+ BFS,LLM list-wise,Recall@5,0.96,0.9745,-0.0145,-0.0203,-0.009,0.0,1
+hotpotqa_BGE-large,Search+ NSP,LLM list-wise,FullRec@5,0.917,0.9515,-0.0345,-0.045,-0.0245,0.0,1
+hotpotqa_BGE-large,Search+ NSP,LLM list-wise,Recall@5,0.9567,0.9745,-0.0177,-0.0232,-0.0125,0.0,1
+hotpotqa_BGE-large_npunlimited,Search+ BFS,LLM list-wise,FullRec@5,0.922,0.971,-0.049,-0.061,-0.0375,0.0,1
+hotpotqa_BGE-large_npunlimited,Search+ BFS,LLM list-wise,Recall@5,0.96,0.9845,-0.0245,-0.0307,-0.0185,0.0,1
+hotpotqa_BGE-large_npunlimited,Search+ NSP,LLM list-wise,FullRec@5,0.917,0.971,-0.054,-0.066,-0.042,0.0,1
+hotpotqa_BGE-large_npunlimited,Search+ NSP,LLM list-wise,Recall@5,0.9567,0.9845,-0.0278,-0.0343,-0.0215,0.0,1
+2wiki_BGE-large_npunlimited,Search+ BFS,LLM list-wise,FullRec@5,0.8975,0.9795,-0.082,-0.096,-0.0685,0.0,1
+2wiki_BGE-large_npunlimited,Search+ BFS,LLM list-wise,Recall@5,0.9589,0.991,-0.0321,-0.0379,-0.0266,0.0,1
+2wiki_BGE-large_npunlimited,Search+ NSP,LLM list-wise,FullRec@5,0.8785,0.9795,-0.101,-0.1155,-0.087,0.0,1
+2wiki_BGE-large_npunlimited,Search+ NSP,LLM list-wise,Recall@5,0.9486,0.991,-0.0424,-0.0489,-0.0361,0.0,1
+musique_BGE-large,Search+ BFS,LLM list-wise,FullRec@5,0.5633,0.5624,0.0008,-0.0223,0.024,0.9746,0
+musique_BGE-large,Search+ BFS,LLM list-wise,Recall@5,0.7922,0.795,-0.0028,-0.0143,0.0087,0.641,0
+musique_BGE-large,Search+ NSP,LLM list-wise,FullRec@5,0.5178,0.5624,-0.0447,-0.0645,-0.0248,0.0,1
+musique_BGE-large,Search+ NSP,LLM list-wise,Recall@5,0.7606,0.795,-0.0344,-0.0452,-0.0236,0.0,1
+musique_BGE-large_npunlimited,Search+ BFS,LLM list-wise,FullRec@5,0.5633,0.6907,-0.1274,-0.153,-0.1026,0.0,1
+musique_BGE-large_npunlimited,Search+ BFS,LLM list-wise,Recall@5,0.7922,0.8725,-0.0803,-0.093,-0.0675,0.0,1
+musique_BGE-large_npunlimited,Search+ NSP,LLM list-wise,FullRec@5,0.5178,0.6907,-0.1729,-0.1977,-0.1481,0.0,1
+musique_BGE-large_npunlimited,Search+ NSP,LLM list-wise,Recall@5,0.7606,0.8725,-0.1119,-0.1255,-0.0981,0.0,1

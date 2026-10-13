@@ -1,0 +1,7 @@
+dataset,retriever,method,type,config,val_Recall@5,Recall@3,Recall@5,FullRec@3,FullRec@5,NDCG@10,MRR
+2wiki,E5-large,ppr,entity,"{""damping"": 0.5}",0.9415,0.8425,0.9389,0.623,0.851,0.9449,0.9738
+2wiki,E5-large,ppr,triple,"{""damping"": 0.7}",0.9539,0.8602,0.9549,0.65,0.8935,0.951,0.971
+2wiki,E5-large,ppr,both,"{""damping"": 0.7}",0.9486,0.8509,0.9466,0.634,0.873,0.9464,0.9702
+2wiki,E5-large,gcs,entity,"{""a"": 0.9}",0.9331,0.8285,0.9291,0.6155,0.8255,0.9427,0.9761
+2wiki,E5-large,gcs,triple,"{""a"": 0.9}",0.9251,0.8233,0.923,0.6055,0.8145,0.9405,0.9761
+2wiki,E5-large,gcs,both,"{""a"": 0.9}",0.9327,0.8291,0.93,0.616,0.83,0.9429,0.9761

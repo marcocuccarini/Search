@@ -1,0 +1,20 @@
+# HippoRAG 2 without vLLM (Windows or Linux). Install with:
+#   pip install hipporag==2.0.0a4 --no-deps
+#   pip install -r requirements_hipporag.txt
+# torch: keep your CUDA build (check: python -c "import torch; print(torch.cuda.is_available())")
+transformers==4.45.2
+openai==1.91.0
+networkx==3.4.2
+python-igraph==0.11.8
+tiktoken
+pydantic==2.10.4
+tenacity==8.5.0
+einops
+accelerate
+datasets
+tqdm
+filelock
+pandas
+httpx
+numpy
+boto3

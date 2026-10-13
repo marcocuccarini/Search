@@ -1,0 +1,55 @@
+{
+ "mode": "WITH QUESTION",
+ "knowledge_graph": {
+  "nodes": [
+   {
+    "id": "U.S. and World Population Clock",
+    "type": "Agency"
+   },
+   {
+    "id": "USA",
+    "type": "Country"
+   },
+   {
+    "id": "Australia",
+    "type": "Country"
+   },
+   {
+    "id": "Canada",
+    "type": "Country"
+   },
+   {
+    "id": "Guam",
+    "type": "Island"
+   },
+   {
+    "id": "Great Lakes",
+    "type": "Body of Water"
+   },
+   {
+    "id": "Punjab",
+    "type": "Province"
+   },
+   {
+    "id": "Paris",
+    "type": "City"
+   },
+   {
+    "id": "Riverside",
+    "type": "City"
+   }
+  ],
+  "edges": [
+   {
+    "source": "U.S. and World Population Clock",
+    "target": "USA",
+    "relationship": "publishes_data_for"
+   },
+   {
+    "source": "USA",
+    "target": "America",
+    "relationship": "is_alias_of"
+   }
+  ]
+ }
+}

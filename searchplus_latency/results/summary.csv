@@ -1,0 +1,10 @@
+dataset,mode,queries,model,gpu,llm_s_mean,llm_s_std,llm_s_median,llm_s_p95,total_s_mean,total_s_std,total_s_median,total_s_p95,graph_build_ms_mean,bfs_ms_mean,nsp_ms_mean,prompt_tokens_mean,output_tokens_mean,n_edges_mean,output_tokens_per_s,rerun,invalid_output_rate,call_error_rate,thinking_chars_mean,incomplete_permutation_rate,hit_num_predict_rate
+hotpotqa,aware,100,gemma4:latest,NVIDIA RTX PRO 5000 Blackwell,7.0628,1.3756,7.0322,9.7542,7.0629,1.3757,7.0323,9.7543,0.137,0.012,0.017,1380.3,1219.7,47.6,178.6,0,0,0,0,,
+hotpotqa,unaware,100,gemma4:latest,NVIDIA RTX PRO 5000 Blackwell,23.623,7.1682,22.9082,37.2592,23.624,7.1684,22.9088,37.2606,1.033,0.016,0.021,1354.4,4164.7,96.8,177.3,0,0.04,0.04,0,,
+hotpotqa,listwise,100,gemma4:latest,NVIDIA RTX PRO 5000 Blackwell,4.9307,0.7934,5.0001,5.948,4.9307,0.7934,5.0001,5.948,,,,1491.2,846.6,,180.9,0,0.18,0,0,0.86,0
+2wiki,aware,100,gemma4:latest,NVIDIA RTX PRO 5000 Blackwell,6.4507,1.2379,6.3363,8.4486,6.4508,1.2379,6.3364,8.4488,0.101,0.005,0.006,993.1,1124.2,7.6,179.6,0,0,0,0,,
+2wiki,unaware,100,gemma4:latest,NVIDIA RTX PRO 5000 Blackwell,22.2136,5.9902,21.7506,32.025,22.2145,5.9905,21.7518,32.032,0.87,0.009,0.012,972.8,3940.6,38.0,178.7,0,0.01,0.01,0,,
+2wiki,listwise,100,gemma4:latest,NVIDIA RTX PRO 5000 Blackwell,4.3113,0.965,4.382,5.8446,4.3113,0.965,4.382,5.8446,,,,1103.3,746.9,,182.0,0,0.06,0,0,0.85,0
+musique,aware,100,gemma4:latest,NVIDIA RTX PRO 5000 Blackwell,8.2289,1.677,8.2828,11.0503,8.2292,1.6771,8.2829,11.051,0.262,0.016,0.023,2503.2,1398.8,63.8,177.5,0,0,0,0,,
+musique,unaware,100,gemma4:latest,NVIDIA RTX PRO 5000 Blackwell,31.4839,16.358,26.2831,62.5293,31.4862,16.3585,26.2847,62.5344,2.236,0.025,0.036,2486.2,5528.3,128.1,176.0,0,0.05,0.02,0,,
+musique,listwise,100,gemma4:latest,NVIDIA RTX PRO 5000 Blackwell,5.7211,0.5261,6.0168,6.2307,5.7211,0.5261,6.0168,6.2307,,,,2699.7,959.4,,179.3,0,0.5,0,0,0.98,0

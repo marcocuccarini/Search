@@ -1,0 +1,7 @@
+dataset,retriever,method,type,config,val_Recall@5,Recall@3,Recall@5,FullRec@3,FullRec@5,NDCG@10,MRR
+musique,GTE-base,ppr,entity,"{""damping"": 0.3}",0.7463,0.6463,0.7584,0.3449,0.5087,0.7971,0.871
+musique,GTE-base,ppr,triple,"{""damping"": 0.3}",0.7732,0.6716,0.7838,0.378,0.5517,0.8124,0.8754
+musique,GTE-base,ppr,both,"{""damping"": 0.3}",0.7512,0.6551,0.763,0.359,0.5178,0.8015,0.8719
+musique,GTE-base,gcs,entity,"{""a"": 0.9}",0.7459,0.6354,0.759,0.3209,0.5012,0.7972,0.8722
+musique,GTE-base,gcs,triple,"{""a"": 0.9}",0.7463,0.6334,0.7546,0.3168,0.4938,0.7942,0.8721
+musique,GTE-base,gcs,both,"{""a"": 0.9}",0.7495,0.6366,0.7592,0.3242,0.5021,0.7966,0.8725
